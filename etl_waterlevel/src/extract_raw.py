@@ -5,6 +5,7 @@ from lxml import etree
 from sqlalchemy import create_engine
 import pandas as pd
 from config import DATABASE_URL
+import re
 
 #### this file extracts data from publicinfobanjir, validates df using pandas, loads df into PostgreSQL for further transformation (split clean_df into tables etc.) ###
 
@@ -36,10 +37,18 @@ def parse_data(html_content):
     )
 
     rows = tree.xpath("//table[@class='normaltable-fluid']/tbody/tr[@class='item']")
+    station_ids = tree.xpath("//table[@class='normaltable-fluid']/tbody/tr[@class='item']/td/a/@href")
 
     row_data = [
         [td.xpath("string(.)").strip() for td in row.xpath(".//td")] for row in rows
     ]
+
+    # replace 2nd columns with station_ids
+    for i, link in enumerate(station_ids):
+        match = re.search(r"stationid=([a-zA-Z0-9]+)", link)
+        if match and i < len(row_data):  # Ensure index does not exceed row_data length
+            row_data[i][1] = match.group(1)  # Extracted station ID
+
 
     return column_names, row_data
 
@@ -67,7 +76,7 @@ def clean(raw_df):
 def load_postgres(df):
     try:
         df.to_sql("raw_publicinfobanjir", con=engine, if_exists="replace", index=False)
-        print("Data successfully stored in PostgreSQL!")
+        print("Data successfully stored in PostgreSQL.")
     except Exception as e:
         print(f"Error storing data: {e}")
 
