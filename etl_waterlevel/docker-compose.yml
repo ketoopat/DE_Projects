@@ -1,0 +1,69 @@
+x-airflow-common: &airflow-common
+  image: airflow_custom:latest
+  build:
+    context: .
+    dockerfile: Dockerfile
+  environment:
+    AIRFLOW__CORE__EXECUTOR: LocalExecutor
+    AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+    AIRFLOW__CORE__FERNET_KEY: "sVOCW2XnTTutvNCsbXmpvEqqkb2YTMCeYltrmvaQIfU="
+    AIRFLOW__WEBSERVER__SECRET_KEY: "Ri4XjxoEQd6_OHQmhfPaD_Ew5qWShAvt5KHvZLa4RmI"
+    AIRFLOW__LOGGING__REMOTE_LOGGING: "False"
+    AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "true"
+    AIRFLOW__CORE__LOAD_EXAMPLES: "false"
+    AIRFLOW__CORE__DEFAULT_TIMEZONE: Asia/Kuala_Lumpur
+  volumes:
+    - ./dags:/opt/airflow/dags
+    - ./src:/opt/airflow/src
+    - ./data:/opt/airflow/data
+  depends_on:
+    - postgres
+  user: "${AIRFLOW_UID:-50000}:0"
+
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  airflow-webserver:
+    <<: *airflow-common
+    command: webserver
+    ports:
+      - "8080:8080"
+
+  airflow-scheduler:
+    <<: *airflow-common
+    command: scheduler
+
+  airflow-init:
+    <<: *airflow-common
+    command: bash -c "airflow db migrate && airflow users create \
+      --username airflow \
+      --password airflow \
+      --firstname Aiman \
+      --lastname DataEngineer \
+      --role Admin \
+      --email airflow@example.com"
+
+  dbt:
+    build:
+      context: ./transform # Points to your dbt folder
+      dockerfile: Dockerfile # Uses the Dockerfile inside './transform'
+    volumes:
+      - ./transform:/usr/app # Mounts your dbt code inside the container
+      - ./.dbt:/root/.dbt
+    working_dir: /usr/app # Default path when you enter the container
+    entrypoint: ["/bin/bash"] # So you can enter the container and run commands manually
+    tty: true # Keeps the container running for CLI use
+    depends_on:
+      - postgres # So dbt can connect to your Docker Postgres
+
+volumes:
+  postgres_data:

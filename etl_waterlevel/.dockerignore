@@ -1,0 +1,8 @@
+__pycache__/
+.venv/
+.git/
+logs/
+*.pyc
+.env
+target/       # For dbt
+profiles.yml  # For dbt

@@ -1,0 +1,12 @@
+etl_waterlevel:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: postgres
+      user: airflow
+      password: airflow
+      port: 5432
+      dbname: airflow
+      schema: staging
+      threads: 4
