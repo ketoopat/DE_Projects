@@ -27,7 +27,7 @@ default_args = {
 with DAG("extract_waterlevels_daily",
          default_args=default_args,
          description="Extract Selangor daily water level data",
-         schedule_interval="0 * * * *",  # Runs at the start of every hour (e.g., 08:00, 09:00)
+         schedule_interval="5 * * * *",  # Runs at the 5th minute of every hour (e.g., 08:05, 09:05)
          catchup=False,  # <- moved here
          tags=['extract']) as dag:
 
