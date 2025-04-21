@@ -17,7 +17,6 @@ model-paths: ["models"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
 seed-paths: ["seeds"]
-model-paths: ["models"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
 
@@ -41,4 +40,8 @@ models:
     dimensions:
       +schema: dim
       +schema_override: true
-      +materialized: view
+      +materialized: table
+    facts:
+      +schema: fact
+      +schema_override: true
+      +materialized: incremental
