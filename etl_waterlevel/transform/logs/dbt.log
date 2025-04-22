@@ -39881,3 +39881,3324 @@ select * from main
 [0m15:05:05.916743 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7cd8c280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7b59a170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7ce1ea40>]}
 [0m15:05:05.916996 [debug] [MainThread]: Flushing usage events
 [0m15:05:07.454047 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:20:26.336426 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8294c2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff81a48520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff81a48580>]}
+
+
+============================== 16:20:26.339355 | 652cfd53-5dd9-4320-ade5-50ad7a903f98 ==============================
+[0m16:20:26.339355 [info ] [MainThread]: Running with dbt=1.9.0
+[0m16:20:26.339741 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/airflow/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/usr/app/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run --models fact_waterlevel', 'send_anonymous_usage_stats': 'True'}
+[0m16:20:26.426162 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '652cfd53-5dd9-4320-ade5-50ad7a903f98', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff810d69e0>]}
+[0m16:20:26.452610 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '652cfd53-5dd9-4320-ade5-50ad7a903f98', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff81a48040>]}
+[0m16:20:26.453099 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m16:20:26.486692 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m16:20:26.538187 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:20:26.538602 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:20:26.542002 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.etl_waterlevel.staging
+[0m16:20:26.554730 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '652cfd53-5dd9-4320-ade5-50ad7a903f98', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80c50520>]}
+[0m16:20:26.594174 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m16:20:26.598106 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m16:20:26.607025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '652cfd53-5dd9-4320-ade5-50ad7a903f98', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80c6f220>]}
+[0m16:20:26.607382 [info ] [MainThread]: Found 3 models, 434 macros
+[0m16:20:26.607630 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '652cfd53-5dd9-4320-ade5-50ad7a903f98', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80c6f1c0>]}
+[0m16:20:26.608347 [info ] [MainThread]: 
+[0m16:20:26.608590 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:20:26.608793 [info ] [MainThread]: 
+[0m16:20:26.609098 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m16:20:26.609700 [debug] [ThreadPool]: Acquiring new postgres connection 'list_airflow'
+[0m16:20:26.648457 [debug] [ThreadPool]: Using postgres connection "list_airflow"
+[0m16:20:26.648862 [debug] [ThreadPool]: On list_airflow: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m16:20:26.649150 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:20:26.652114 [debug] [ThreadPool]: SQL status: SELECT 36 in 0.003 seconds
+[0m16:20:26.652930 [debug] [ThreadPool]: On list_airflow: Close
+[0m16:20:26.655630 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_airflow, now list_airflow_fact)
+[0m16:20:26.658789 [debug] [ThreadPool]: Using postgres connection "list_airflow_fact"
+[0m16:20:26.659073 [debug] [ThreadPool]: On list_airflow_fact: BEGIN
+[0m16:20:26.659327 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:20:26.660956 [debug] [ThreadPool]: SQL status: BEGIN in 0.002 seconds
+[0m16:20:26.661319 [debug] [ThreadPool]: Using postgres connection "list_airflow_fact"
+[0m16:20:26.661586 [debug] [ThreadPool]: On list_airflow_fact: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow_fact"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'fact'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'fact'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'fact'
+  
+[0m16:20:26.662909 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.001 seconds
+[0m16:20:26.663582 [debug] [ThreadPool]: On list_airflow_fact: ROLLBACK
+[0m16:20:26.663926 [debug] [ThreadPool]: On list_airflow_fact: Close
+[0m16:20:26.664326 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_airflow_fact, now list_airflow_dim)
+[0m16:20:26.665624 [debug] [ThreadPool]: Using postgres connection "list_airflow_dim"
+[0m16:20:26.665886 [debug] [ThreadPool]: On list_airflow_dim: BEGIN
+[0m16:20:26.666123 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:20:26.667616 [debug] [ThreadPool]: SQL status: BEGIN in 0.001 seconds
+[0m16:20:26.667915 [debug] [ThreadPool]: Using postgres connection "list_airflow_dim"
+[0m16:20:26.668170 [debug] [ThreadPool]: On list_airflow_dim: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow_dim"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dim'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dim'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dim'
+  
+[0m16:20:26.669454 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.001 seconds
+[0m16:20:26.670074 [debug] [ThreadPool]: On list_airflow_dim: ROLLBACK
+[0m16:20:26.670400 [debug] [ThreadPool]: On list_airflow_dim: Close
+[0m16:20:26.672848 [debug] [MainThread]: Using postgres connection "master"
+[0m16:20:26.673105 [debug] [MainThread]: On master: BEGIN
+[0m16:20:26.673342 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:20:26.674802 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m16:20:26.675097 [debug] [MainThread]: Using postgres connection "master"
+[0m16:20:26.675407 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m16:20:26.678236 [debug] [MainThread]: SQL status: SELECT 2 in 0.003 seconds
+[0m16:20:26.678888 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '652cfd53-5dd9-4320-ade5-50ad7a903f98', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff84a50ca0>]}
+[0m16:20:26.679228 [debug] [MainThread]: On master: ROLLBACK
+[0m16:20:26.679582 [debug] [MainThread]: Using postgres connection "master"
+[0m16:20:26.679824 [debug] [MainThread]: On master: BEGIN
+[0m16:20:26.680239 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m16:20:26.680541 [debug] [MainThread]: On master: COMMIT
+[0m16:20:26.680777 [debug] [MainThread]: Using postgres connection "master"
+[0m16:20:26.681014 [debug] [MainThread]: On master: COMMIT
+[0m16:20:26.681353 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m16:20:26.681597 [debug] [MainThread]: On master: Close
+[0m16:20:26.682784 [debug] [Thread-1 (]: Began running node model.etl_waterlevel.fact_waterlevel
+[0m16:20:26.683182 [info ] [Thread-1 (]: 1 of 1 START sql incremental model fact.fact_waterlevel ........................ [RUN]
+[0m16:20:26.683550 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_airflow_dim, now model.etl_waterlevel.fact_waterlevel)
+[0m16:20:26.683827 [debug] [Thread-1 (]: Began compiling node model.etl_waterlevel.fact_waterlevel
+[0m16:20:26.690680 [debug] [Thread-1 (]: Writing injected SQL for node "model.etl_waterlevel.fact_waterlevel"
+[0m16:20:26.691940 [debug] [Thread-1 (]: Began executing node model.etl_waterlevel.fact_waterlevel
+[0m16:20:26.719832 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m16:20:26.720192 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+    
+  
+    
+
+  create temporary table "fact_waterlevel__dbt_tmp162026707825"
+  
+  
+    as
+  
+  (
+    
+
+with main as (
+    select
+        distinct
+        concat("stationId",'_',"stationCode") as station_key,
+        "stationId" as station_id,
+        "stationCode" as station_code,
+        "waterLevel" as water_level,
+        "waterlevelStatus" as waterlevel_status,
+        case
+            when "waterlevelStatus" = 3 then '🚨 Beyond Danger'
+            when "waterlevelStatus" = 2 then '⚠️ Between Warning and Danger'
+            when "waterlevelStatus" = 1 then '🔶 Between Alert and Warning'
+            when "waterlevelStatus" = 0 then '✅ Between Normal and Alert'
+            when "waterlevelStatus" = -1 then '🟢 Below Normal (Safe)'
+            else '❓ Unknown Status'
+        end as waterlevel_condition,
+        "stationName",
+        "districtName",
+        to_timestamp("lastUpdate", 'DD/MM/YYYY HH24:MI:SS')::timestamp AS last_update
+    from
+        raw.waterlevels w
+    where
+        "stationStatus" = 1
+
+        
+        /* This condition is important to avoid reprocessing old data */
+        and to_timestamp("lastUpdate", 'DD/MM/YYYY HH24:MI:SS')::timestamp > (
+            select max(last_update) from "airflow"."fact"."fact_waterlevel"
+        )
+        
+)
+
+select * from main
+  );
+  
+  
+[0m16:20:26.720536 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:20:26.735307 [debug] [Thread-1 (]: SQL status: SELECT 72 in 0.015 seconds
+[0m16:20:26.742382 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m16:20:26.742698 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: BEGIN
+[0m16:20:26.743111 [debug] [Thread-1 (]: SQL status: BEGIN in 0.000 seconds
+[0m16:20:26.743452 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m16:20:26.743742 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel__dbt_tmp162026707825'
+        
+      order by ordinal_position
+
+  
+[0m16:20:26.746379 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.002 seconds
+[0m16:20:26.748990 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m16:20:26.749309 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "airflow".INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel'
+        
+        and table_schema = 'fact'
+        
+      order by ordinal_position
+
+  
+[0m16:20:26.750642 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m16:20:26.757017 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m16:20:26.757327 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel__dbt_tmp162026707825'
+        
+      order by ordinal_position
+
+  
+[0m16:20:26.758552 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m16:20:26.760251 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m16:20:26.760578 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "airflow".INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel'
+        
+        and table_schema = 'fact'
+        
+      order by ordinal_position
+
+  
+[0m16:20:26.761753 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m16:20:26.766285 [debug] [Thread-1 (]: 
+    In "airflow"."fact"."fact_waterlevel":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+[0m16:20:26.769702 [debug] [Thread-1 (]: Writing runtime sql for node "model.etl_waterlevel.fact_waterlevel"
+[0m16:20:26.770720 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m16:20:26.771010 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      insert into "airflow"."fact"."fact_waterlevel" ("station_key", "station_id", "station_code", "water_level", "waterlevel_status", "waterlevel_condition", "stationName", "districtName", "last_update")
+    (
+        select "station_key", "station_id", "station_code", "water_level", "waterlevel_status", "waterlevel_condition", "stationName", "districtName", "last_update"
+        from "fact_waterlevel__dbt_tmp162026707825"
+    )
+
+
+  
+[0m16:20:26.771527 [debug] [Thread-1 (]: SQL status: INSERT 0 72 in 0.000 seconds
+[0m16:20:26.779033 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: COMMIT
+[0m16:20:26.779331 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m16:20:26.779571 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: COMMIT
+[0m16:20:26.781969 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m16:20:26.783021 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: Close
+[0m16:20:26.784144 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '652cfd53-5dd9-4320-ade5-50ad7a903f98', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff84abe770>]}
+[0m16:20:26.784673 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model fact.fact_waterlevel ................... [[32mINSERT 0 72[0m in 0.10s]
+[0m16:20:26.785064 [debug] [Thread-1 (]: Finished running node model.etl_waterlevel.fact_waterlevel
+[0m16:20:26.785766 [debug] [MainThread]: Using postgres connection "master"
+[0m16:20:26.786044 [debug] [MainThread]: On master: BEGIN
+[0m16:20:26.786276 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:20:26.787743 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m16:20:26.788002 [debug] [MainThread]: On master: COMMIT
+[0m16:20:26.788242 [debug] [MainThread]: Using postgres connection "master"
+[0m16:20:26.788438 [debug] [MainThread]: On master: COMMIT
+[0m16:20:26.788710 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m16:20:26.788945 [debug] [MainThread]: On master: Close
+[0m16:20:26.789225 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:20:26.789440 [debug] [MainThread]: Connection 'model.etl_waterlevel.fact_waterlevel' was properly closed.
+[0m16:20:26.789658 [info ] [MainThread]: 
+[0m16:20:26.789876 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 0.18 seconds (0.18s).
+[0m16:20:26.790254 [debug] [MainThread]: Command end result
+[0m16:20:26.804351 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m16:20:26.805424 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m16:20:26.808793 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/target/run_results.json
+[0m16:20:26.809028 [info ] [MainThread]: 
+[0m16:20:26.809304 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:20:26.809538 [info ] [MainThread]: 
+[0m16:20:26.809782 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m16:20:26.810301 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.50044066, "process_in_blocks": "0", "process_kernel_time": 0.074214, "process_mem_max_rss": "111400", "process_out_blocks": "1701", "process_user_time": 1.20148}
+[0m16:20:26.810621 [debug] [MainThread]: Command `dbt run` succeeded at 16:20:26.810577 after 0.50 seconds
+[0m16:20:26.810854 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8294c2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff82967550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff81a20640>]}
+[0m16:20:26.811113 [debug] [MainThread]: Flushing usage events
+[0m16:20:28.304583 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:09:02.690340 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa928c310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa837bd30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa837bcd0>]}
+
+
+============================== 17:09:02.694437 | eeb1d29c-1496-45bb-978f-50ced89dcbc8 ==============================
+[0m17:09:02.694437 [info ] [MainThread]: Running with dbt=1.9.0
+[0m17:09:02.694828 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/usr/app/logs', 'profiles_dir': '/home/airflow/.dbt', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt run --models fact_waterlevel', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m17:09:02.780970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'eeb1d29c-1496-45bb-978f-50ced89dcbc8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7a42290>]}
+[0m17:09:02.807331 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'eeb1d29c-1496-45bb-978f-50ced89dcbc8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa91dc1c0>]}
+[0m17:09:02.807837 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m17:09:02.841831 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m17:09:02.891836 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:09:02.892132 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:09:02.895267 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.etl_waterlevel.staging
+[0m17:09:02.906831 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'eeb1d29c-1496-45bb-978f-50ced89dcbc8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa75cc550>]}
+[0m17:09:02.942016 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m17:09:02.945896 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m17:09:02.954896 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'eeb1d29c-1496-45bb-978f-50ced89dcbc8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa75eb220>]}
+[0m17:09:02.955202 [info ] [MainThread]: Found 3 models, 434 macros
+[0m17:09:02.955427 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'eeb1d29c-1496-45bb-978f-50ced89dcbc8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa75eb1c0>]}
+[0m17:09:02.956099 [info ] [MainThread]: 
+[0m17:09:02.956368 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m17:09:02.956620 [info ] [MainThread]: 
+[0m17:09:02.956942 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m17:09:02.957556 [debug] [ThreadPool]: Acquiring new postgres connection 'list_airflow'
+[0m17:09:02.995769 [debug] [ThreadPool]: Using postgres connection "list_airflow"
+[0m17:09:02.996160 [debug] [ThreadPool]: On list_airflow: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m17:09:02.996458 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:09:02.999449 [debug] [ThreadPool]: SQL status: SELECT 36 in 0.003 seconds
+[0m17:09:03.000275 [debug] [ThreadPool]: On list_airflow: Close
+[0m17:09:03.002853 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_airflow, now list_airflow_fact)
+[0m17:09:03.005984 [debug] [ThreadPool]: Using postgres connection "list_airflow_fact"
+[0m17:09:03.006280 [debug] [ThreadPool]: On list_airflow_fact: BEGIN
+[0m17:09:03.006526 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:09:03.008125 [debug] [ThreadPool]: SQL status: BEGIN in 0.002 seconds
+[0m17:09:03.008458 [debug] [ThreadPool]: Using postgres connection "list_airflow_fact"
+[0m17:09:03.008745 [debug] [ThreadPool]: On list_airflow_fact: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow_fact"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'fact'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'fact'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'fact'
+  
+[0m17:09:03.010222 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.001 seconds
+[0m17:09:03.010923 [debug] [ThreadPool]: On list_airflow_fact: ROLLBACK
+[0m17:09:03.011329 [debug] [ThreadPool]: On list_airflow_fact: Close
+[0m17:09:03.011718 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_airflow_fact, now list_airflow_dim)
+[0m17:09:03.013074 [debug] [ThreadPool]: Using postgres connection "list_airflow_dim"
+[0m17:09:03.013407 [debug] [ThreadPool]: On list_airflow_dim: BEGIN
+[0m17:09:03.013674 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:09:03.015362 [debug] [ThreadPool]: SQL status: BEGIN in 0.002 seconds
+[0m17:09:03.015676 [debug] [ThreadPool]: Using postgres connection "list_airflow_dim"
+[0m17:09:03.015948 [debug] [ThreadPool]: On list_airflow_dim: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow_dim"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dim'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dim'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dim'
+  
+[0m17:09:03.017256 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.001 seconds
+[0m17:09:03.017942 [debug] [ThreadPool]: On list_airflow_dim: ROLLBACK
+[0m17:09:03.018273 [debug] [ThreadPool]: On list_airflow_dim: Close
+[0m17:09:03.020827 [debug] [MainThread]: Using postgres connection "master"
+[0m17:09:03.021098 [debug] [MainThread]: On master: BEGIN
+[0m17:09:03.021359 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:09:03.022945 [debug] [MainThread]: SQL status: BEGIN in 0.002 seconds
+[0m17:09:03.023271 [debug] [MainThread]: Using postgres connection "master"
+[0m17:09:03.023573 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m17:09:03.026546 [debug] [MainThread]: SQL status: SELECT 2 in 0.003 seconds
+[0m17:09:03.027214 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'eeb1d29c-1496-45bb-978f-50ced89dcbc8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaad29f00>]}
+[0m17:09:03.027511 [debug] [MainThread]: On master: ROLLBACK
+[0m17:09:03.027845 [debug] [MainThread]: Using postgres connection "master"
+[0m17:09:03.028099 [debug] [MainThread]: On master: BEGIN
+[0m17:09:03.028518 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m17:09:03.028800 [debug] [MainThread]: On master: COMMIT
+[0m17:09:03.029039 [debug] [MainThread]: Using postgres connection "master"
+[0m17:09:03.029275 [debug] [MainThread]: On master: COMMIT
+[0m17:09:03.029586 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m17:09:03.029828 [debug] [MainThread]: On master: Close
+[0m17:09:03.030971 [debug] [Thread-1 (]: Began running node model.etl_waterlevel.fact_waterlevel
+[0m17:09:03.031344 [info ] [Thread-1 (]: 1 of 1 START sql incremental model fact.fact_waterlevel ........................ [RUN]
+[0m17:09:03.031661 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_airflow_dim, now model.etl_waterlevel.fact_waterlevel)
+[0m17:09:03.031929 [debug] [Thread-1 (]: Began compiling node model.etl_waterlevel.fact_waterlevel
+[0m17:09:03.038816 [debug] [Thread-1 (]: Writing injected SQL for node "model.etl_waterlevel.fact_waterlevel"
+[0m17:09:03.040334 [debug] [Thread-1 (]: Began executing node model.etl_waterlevel.fact_waterlevel
+[0m17:09:03.068097 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m17:09:03.068476 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+    
+  
+    
+
+  create temporary table "fact_waterlevel__dbt_tmp170903055901"
+  
+  
+    as
+  
+  (
+    
+
+with main as (
+    select
+        distinct
+        concat("stationId",'_',"stationCode") as station_key,
+        "stationId" as station_id,
+        "stationCode" as station_code,
+        "waterLevel" as water_level,
+        "waterlevelStatus" as waterlevel_status,
+        case
+            when "waterlevelStatus" = 3 then '🚨 Beyond Danger'
+            when "waterlevelStatus" = 2 then '⚠️ Between Warning and Danger'
+            when "waterlevelStatus" = 1 then '🔶 Between Alert and Warning'
+            when "waterlevelStatus" = 0 then '✅ Between Normal and Alert'
+            when "waterlevelStatus" = -1 then '🟢 Below Normal (Safe)'
+            else '❓ Unknown Status'
+        end as waterlevel_condition,
+        "stationName",
+        "districtName",
+        to_timestamp("lastUpdate", 'DD/MM/YYYY HH24:MI:SS')::timestamp AS last_update
+    from
+        raw.waterlevels w
+    where
+        "stationStatus" = 1
+
+        
+        /* This condition is important to avoid reprocessing old data */
+        and to_timestamp("lastUpdate", 'DD/MM/YYYY HH24:MI:SS')::timestamp > (
+            select max(last_update) from "airflow"."fact"."fact_waterlevel"
+        )
+        
+)
+
+select * from main
+  );
+  
+  
+[0m17:09:03.068808 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:09:03.085233 [debug] [Thread-1 (]: SQL status: SELECT 72 in 0.016 seconds
+[0m17:09:03.092240 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m17:09:03.092545 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: BEGIN
+[0m17:09:03.092976 [debug] [Thread-1 (]: SQL status: BEGIN in 0.000 seconds
+[0m17:09:03.093400 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m17:09:03.093732 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel__dbt_tmp170903055901'
+        
+      order by ordinal_position
+
+  
+[0m17:09:03.096538 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.003 seconds
+[0m17:09:03.099339 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m17:09:03.099654 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "airflow".INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel'
+        
+        and table_schema = 'fact'
+        
+      order by ordinal_position
+
+  
+[0m17:09:03.100982 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m17:09:03.107376 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m17:09:03.107688 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel__dbt_tmp170903055901'
+        
+      order by ordinal_position
+
+  
+[0m17:09:03.108898 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m17:09:03.110618 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m17:09:03.110922 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "airflow".INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel'
+        
+        and table_schema = 'fact'
+        
+      order by ordinal_position
+
+  
+[0m17:09:03.112085 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m17:09:03.116574 [debug] [Thread-1 (]: 
+    In "airflow"."fact"."fact_waterlevel":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+[0m17:09:03.119990 [debug] [Thread-1 (]: Writing runtime sql for node "model.etl_waterlevel.fact_waterlevel"
+[0m17:09:03.120822 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m17:09:03.121131 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      insert into "airflow"."fact"."fact_waterlevel" ("station_key", "station_id", "station_code", "water_level", "waterlevel_status", "waterlevel_condition", "stationName", "districtName", "last_update")
+    (
+        select "station_key", "station_id", "station_code", "water_level", "waterlevel_status", "waterlevel_condition", "stationName", "districtName", "last_update"
+        from "fact_waterlevel__dbt_tmp170903055901"
+    )
+
+
+  
+[0m17:09:03.121665 [debug] [Thread-1 (]: SQL status: INSERT 0 72 in 0.000 seconds
+[0m17:09:03.129016 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: COMMIT
+[0m17:09:03.129318 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m17:09:03.129590 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: COMMIT
+[0m17:09:03.131209 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m17:09:03.132224 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: Close
+[0m17:09:03.133360 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'eeb1d29c-1496-45bb-978f-50ced89dcbc8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffab379ae0>]}
+[0m17:09:03.133828 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model fact.fact_waterlevel ................... [[32mINSERT 0 72[0m in 0.10s]
+[0m17:09:03.134190 [debug] [Thread-1 (]: Finished running node model.etl_waterlevel.fact_waterlevel
+[0m17:09:03.134848 [debug] [MainThread]: Using postgres connection "master"
+[0m17:09:03.135104 [debug] [MainThread]: On master: BEGIN
+[0m17:09:03.135319 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:09:03.136768 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m17:09:03.137041 [debug] [MainThread]: On master: COMMIT
+[0m17:09:03.137283 [debug] [MainThread]: Using postgres connection "master"
+[0m17:09:03.137508 [debug] [MainThread]: On master: COMMIT
+[0m17:09:03.137770 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m17:09:03.137965 [debug] [MainThread]: On master: Close
+[0m17:09:03.138226 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:09:03.138434 [debug] [MainThread]: Connection 'model.etl_waterlevel.fact_waterlevel' was properly closed.
+[0m17:09:03.138649 [info ] [MainThread]: 
+[0m17:09:03.138863 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 0.18 seconds (0.18s).
+[0m17:09:03.139236 [debug] [MainThread]: Command end result
+[0m17:09:03.154315 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m17:09:03.155357 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m17:09:03.159021 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/target/run_results.json
+[0m17:09:03.159267 [info ] [MainThread]: 
+[0m17:09:03.159560 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:09:03.159805 [info ] [MainThread]: 
+[0m17:09:03.160041 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m17:09:03.160596 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.49631926, "process_in_blocks": "0", "process_kernel_time": 0.095898, "process_mem_max_rss": "111488", "process_out_blocks": "1701", "process_user_time": 1.192737}
+[0m17:09:03.160939 [debug] [MainThread]: Command `dbt run` succeeded at 17:09:03.160895 after 0.50 seconds
+[0m17:09:03.161182 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa928c310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7a42290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa92fb6d0>]}
+[0m17:09:03.161416 [debug] [MainThread]: Flushing usage events
+[0m17:09:04.484347 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:05:55.513824 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaea50310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffadb57d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffadb57cd0>]}
+
+
+============================== 18:05:55.516777 | 46721bb2-4135-420b-9ada-8d0ef2fa161b ==============================
+[0m18:05:55.516777 [info ] [MainThread]: Running with dbt=1.9.0
+[0m18:05:55.517196 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/airflow/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': '/usr/app/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --models fact_waterlevel', 'send_anonymous_usage_stats': 'True'}
+[0m18:05:55.600199 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '46721bb2-4135-420b-9ada-8d0ef2fa161b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffad1e6290>]}
+[0m18:05:55.626527 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '46721bb2-4135-420b-9ada-8d0ef2fa161b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffae99c1c0>]}
+[0m18:05:55.626981 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m18:05:55.660647 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m18:05:55.709637 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m18:05:55.709950 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m18:05:55.713113 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.etl_waterlevel.staging
+[0m18:05:55.724915 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '46721bb2-4135-420b-9ada-8d0ef2fa161b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffacd5c550>]}
+[0m18:05:55.761585 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m18:05:55.765469 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m18:05:55.774011 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '46721bb2-4135-420b-9ada-8d0ef2fa161b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffacd7b220>]}
+[0m18:05:55.774329 [info ] [MainThread]: Found 3 models, 434 macros
+[0m18:05:55.774569 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '46721bb2-4135-420b-9ada-8d0ef2fa161b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffacd7b1c0>]}
+[0m18:05:55.775252 [info ] [MainThread]: 
+[0m18:05:55.775510 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m18:05:55.775714 [info ] [MainThread]: 
+[0m18:05:55.776055 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m18:05:55.776747 [debug] [ThreadPool]: Acquiring new postgres connection 'list_airflow'
+[0m18:05:55.815989 [debug] [ThreadPool]: Using postgres connection "list_airflow"
+[0m18:05:55.816472 [debug] [ThreadPool]: On list_airflow: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m18:05:55.816775 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m18:05:55.819507 [debug] [ThreadPool]: SQL status: SELECT 36 in 0.003 seconds
+[0m18:05:55.820306 [debug] [ThreadPool]: On list_airflow: Close
+[0m18:05:55.822912 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_airflow, now list_airflow_dim)
+[0m18:05:55.826064 [debug] [ThreadPool]: Using postgres connection "list_airflow_dim"
+[0m18:05:55.826419 [debug] [ThreadPool]: On list_airflow_dim: BEGIN
+[0m18:05:55.826661 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:05:55.829110 [debug] [ThreadPool]: SQL status: BEGIN in 0.002 seconds
+[0m18:05:55.829479 [debug] [ThreadPool]: Using postgres connection "list_airflow_dim"
+[0m18:05:55.829741 [debug] [ThreadPool]: On list_airflow_dim: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow_dim"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dim'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dim'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dim'
+  
+[0m18:05:55.831071 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.001 seconds
+[0m18:05:55.831750 [debug] [ThreadPool]: On list_airflow_dim: ROLLBACK
+[0m18:05:55.832094 [debug] [ThreadPool]: On list_airflow_dim: Close
+[0m18:05:55.832498 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_airflow_dim, now list_airflow_fact)
+[0m18:05:55.833908 [debug] [ThreadPool]: Using postgres connection "list_airflow_fact"
+[0m18:05:55.834177 [debug] [ThreadPool]: On list_airflow_fact: BEGIN
+[0m18:05:55.834415 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m18:05:55.835861 [debug] [ThreadPool]: SQL status: BEGIN in 0.001 seconds
+[0m18:05:55.836197 [debug] [ThreadPool]: Using postgres connection "list_airflow_fact"
+[0m18:05:55.836478 [debug] [ThreadPool]: On list_airflow_fact: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow_fact"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'fact'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'fact'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'fact'
+  
+[0m18:05:55.837699 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.001 seconds
+[0m18:05:55.838323 [debug] [ThreadPool]: On list_airflow_fact: ROLLBACK
+[0m18:05:55.838647 [debug] [ThreadPool]: On list_airflow_fact: Close
+[0m18:05:55.841069 [debug] [MainThread]: Using postgres connection "master"
+[0m18:05:55.841385 [debug] [MainThread]: On master: BEGIN
+[0m18:05:55.841625 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m18:05:55.843112 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m18:05:55.843430 [debug] [MainThread]: Using postgres connection "master"
+[0m18:05:55.843725 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m18:05:55.846594 [debug] [MainThread]: SQL status: SELECT 2 in 0.003 seconds
+[0m18:05:55.847237 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '46721bb2-4135-420b-9ada-8d0ef2fa161b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb037be50>]}
+[0m18:05:55.847587 [debug] [MainThread]: On master: ROLLBACK
+[0m18:05:55.847924 [debug] [MainThread]: Using postgres connection "master"
+[0m18:05:55.848187 [debug] [MainThread]: On master: BEGIN
+[0m18:05:55.848591 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m18:05:55.848879 [debug] [MainThread]: On master: COMMIT
+[0m18:05:55.849140 [debug] [MainThread]: Using postgres connection "master"
+[0m18:05:55.849378 [debug] [MainThread]: On master: COMMIT
+[0m18:05:55.849703 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m18:05:55.849951 [debug] [MainThread]: On master: Close
+[0m18:05:55.851073 [debug] [Thread-1 (]: Began running node model.etl_waterlevel.fact_waterlevel
+[0m18:05:55.851492 [info ] [Thread-1 (]: 1 of 1 START sql incremental model fact.fact_waterlevel ........................ [RUN]
+[0m18:05:55.851810 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_airflow_fact, now model.etl_waterlevel.fact_waterlevel)
+[0m18:05:55.852096 [debug] [Thread-1 (]: Began compiling node model.etl_waterlevel.fact_waterlevel
+[0m18:05:55.858939 [debug] [Thread-1 (]: Writing injected SQL for node "model.etl_waterlevel.fact_waterlevel"
+[0m18:05:55.859889 [debug] [Thread-1 (]: Began executing node model.etl_waterlevel.fact_waterlevel
+[0m18:05:55.887693 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m18:05:55.888050 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+    
+  
+    
+
+  create temporary table "fact_waterlevel__dbt_tmp180555875811"
+  
+  
+    as
+  
+  (
+    
+
+with main as (
+    select
+        distinct
+        concat("stationId",'_',"stationCode") as station_key,
+        "stationId" as station_id,
+        "stationCode" as station_code,
+        "waterLevel" as water_level,
+        "waterlevelStatus" as waterlevel_status,
+        case
+            when "waterlevelStatus" = 3 then '🚨 Beyond Danger'
+            when "waterlevelStatus" = 2 then '⚠️ Between Warning and Danger'
+            when "waterlevelStatus" = 1 then '🔶 Between Alert and Warning'
+            when "waterlevelStatus" = 0 then '✅ Between Normal and Alert'
+            when "waterlevelStatus" = -1 then '🟢 Below Normal (Safe)'
+            else '❓ Unknown Status'
+        end as waterlevel_condition,
+        "stationName",
+        "districtName",
+        to_timestamp("lastUpdate", 'DD/MM/YYYY HH24:MI:SS')::timestamp AS last_update
+    from
+        raw.waterlevels w
+    where
+        "stationStatus" = 1
+
+        
+        /* This condition is important to avoid reprocessing old data */
+        and to_timestamp("lastUpdate", 'DD/MM/YYYY HH24:MI:SS')::timestamp > (
+            select max(last_update) from "airflow"."fact"."fact_waterlevel"
+        )
+        
+)
+
+select * from main
+  );
+  
+  
+[0m18:05:55.888457 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m18:05:55.903184 [debug] [Thread-1 (]: SQL status: SELECT 71 in 0.015 seconds
+[0m18:05:55.910246 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m18:05:55.910556 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: BEGIN
+[0m18:05:55.910956 [debug] [Thread-1 (]: SQL status: BEGIN in 0.000 seconds
+[0m18:05:55.911307 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m18:05:55.911608 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel__dbt_tmp180555875811'
+        
+      order by ordinal_position
+
+  
+[0m18:05:55.914214 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.002 seconds
+[0m18:05:55.916816 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m18:05:55.917163 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "airflow".INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel'
+        
+        and table_schema = 'fact'
+        
+      order by ordinal_position
+
+  
+[0m18:05:55.918437 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m18:05:55.924898 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m18:05:55.925230 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel__dbt_tmp180555875811'
+        
+      order by ordinal_position
+
+  
+[0m18:05:55.926472 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m18:05:55.928208 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m18:05:55.928509 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "airflow".INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel'
+        
+        and table_schema = 'fact'
+        
+      order by ordinal_position
+
+  
+[0m18:05:55.929676 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m18:05:55.934315 [debug] [Thread-1 (]: 
+    In "airflow"."fact"."fact_waterlevel":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+[0m18:05:55.937729 [debug] [Thread-1 (]: Writing runtime sql for node "model.etl_waterlevel.fact_waterlevel"
+[0m18:05:55.938610 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m18:05:55.938924 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      insert into "airflow"."fact"."fact_waterlevel" ("station_key", "station_id", "station_code", "water_level", "waterlevel_status", "waterlevel_condition", "stationName", "districtName", "last_update")
+    (
+        select "station_key", "station_id", "station_code", "water_level", "waterlevel_status", "waterlevel_condition", "stationName", "districtName", "last_update"
+        from "fact_waterlevel__dbt_tmp180555875811"
+    )
+
+
+  
+[0m18:05:55.939413 [debug] [Thread-1 (]: SQL status: INSERT 0 71 in 0.000 seconds
+[0m18:05:55.946922 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: COMMIT
+[0m18:05:55.947222 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m18:05:55.947498 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: COMMIT
+[0m18:05:55.950160 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m18:05:55.951263 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: Close
+[0m18:05:55.952304 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '46721bb2-4135-420b-9ada-8d0ef2fa161b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb0bae7a0>]}
+[0m18:05:55.952828 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model fact.fact_waterlevel ................... [[32mINSERT 0 71[0m in 0.10s]
+[0m18:05:55.953245 [debug] [Thread-1 (]: Finished running node model.etl_waterlevel.fact_waterlevel
+[0m18:05:55.953950 [debug] [MainThread]: Using postgres connection "master"
+[0m18:05:55.954204 [debug] [MainThread]: On master: BEGIN
+[0m18:05:55.954417 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m18:05:55.955864 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m18:05:55.956139 [debug] [MainThread]: On master: COMMIT
+[0m18:05:55.956375 [debug] [MainThread]: Using postgres connection "master"
+[0m18:05:55.956592 [debug] [MainThread]: On master: COMMIT
+[0m18:05:55.956854 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m18:05:55.957058 [debug] [MainThread]: On master: Close
+[0m18:05:55.957328 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m18:05:55.957545 [debug] [MainThread]: Connection 'model.etl_waterlevel.fact_waterlevel' was properly closed.
+[0m18:05:55.957757 [info ] [MainThread]: 
+[0m18:05:55.957979 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 0.18 seconds (0.18s).
+[0m18:05:55.958355 [debug] [MainThread]: Command end result
+[0m18:05:55.973277 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m18:05:55.974344 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m18:05:55.978172 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/target/run_results.json
+[0m18:05:55.978428 [info ] [MainThread]: 
+[0m18:05:55.978727 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m18:05:55.978963 [info ] [MainThread]: 
+[0m18:05:55.979192 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m18:05:55.979719 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.49154508, "process_in_blocks": "0", "process_kernel_time": 0.078262, "process_mem_max_rss": "111396", "process_out_blocks": "1701", "process_user_time": 1.182963}
+[0m18:05:55.980065 [debug] [MainThread]: Command `dbt run` succeeded at 18:05:55.980021 after 0.49 seconds
+[0m18:05:55.980316 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaea50310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffad1e6290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaeabf6d0>]}
+[0m18:05:55.980568 [debug] [MainThread]: Flushing usage events
+[0m18:05:57.691939 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:07:18.699789 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9fc542b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9ed57cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9ed57c70>]}
+
+
+============================== 19:07:18.703052 | e5253701-e527-43a6-9a26-b2d3f1b8fdf5 ==============================
+[0m19:07:18.703052 [info ] [MainThread]: Running with dbt=1.9.0
+[0m19:07:18.703494 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/airflow/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/usr/app/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --models fact_waterlevel', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m19:07:18.792369 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e5253701-e527-43a6-9a26-b2d3f1b8fdf5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa1d5bd60>]}
+[0m19:07:18.819090 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e5253701-e527-43a6-9a26-b2d3f1b8fdf5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9fb9c100>]}
+[0m19:07:18.819594 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m19:07:18.853607 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m19:07:18.902420 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:07:18.902746 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:07:18.905991 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.etl_waterlevel.staging
+[0m19:07:18.917737 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e5253701-e527-43a6-9a26-b2d3f1b8fdf5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9df704f0>]}
+[0m19:07:18.953767 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m19:07:18.957474 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m19:07:18.966255 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e5253701-e527-43a6-9a26-b2d3f1b8fdf5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9df8f220>]}
+[0m19:07:18.966574 [info ] [MainThread]: Found 3 models, 434 macros
+[0m19:07:18.966819 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e5253701-e527-43a6-9a26-b2d3f1b8fdf5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9df8f1c0>]}
+[0m19:07:18.967570 [info ] [MainThread]: 
+[0m19:07:18.967851 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m19:07:18.968070 [info ] [MainThread]: 
+[0m19:07:18.968370 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m19:07:18.968931 [debug] [ThreadPool]: Acquiring new postgres connection 'list_airflow'
+[0m19:07:19.007084 [debug] [ThreadPool]: Using postgres connection "list_airflow"
+[0m19:07:19.007499 [debug] [ThreadPool]: On list_airflow: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m19:07:19.007772 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:07:19.010474 [debug] [ThreadPool]: SQL status: SELECT 36 in 0.003 seconds
+[0m19:07:19.011218 [debug] [ThreadPool]: On list_airflow: Close
+[0m19:07:19.013874 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_airflow, now list_airflow_fact)
+[0m19:07:19.017053 [debug] [ThreadPool]: Using postgres connection "list_airflow_fact"
+[0m19:07:19.017327 [debug] [ThreadPool]: On list_airflow_fact: BEGIN
+[0m19:07:19.017575 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:07:19.019127 [debug] [ThreadPool]: SQL status: BEGIN in 0.002 seconds
+[0m19:07:19.019453 [debug] [ThreadPool]: Using postgres connection "list_airflow_fact"
+[0m19:07:19.019718 [debug] [ThreadPool]: On list_airflow_fact: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow_fact"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'fact'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'fact'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'fact'
+  
+[0m19:07:19.021019 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.001 seconds
+[0m19:07:19.021688 [debug] [ThreadPool]: On list_airflow_fact: ROLLBACK
+[0m19:07:19.022021 [debug] [ThreadPool]: On list_airflow_fact: Close
+[0m19:07:19.022415 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_airflow_fact, now list_airflow_dim)
+[0m19:07:19.023756 [debug] [ThreadPool]: Using postgres connection "list_airflow_dim"
+[0m19:07:19.024015 [debug] [ThreadPool]: On list_airflow_dim: BEGIN
+[0m19:07:19.024272 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:07:19.025699 [debug] [ThreadPool]: SQL status: BEGIN in 0.001 seconds
+[0m19:07:19.025994 [debug] [ThreadPool]: Using postgres connection "list_airflow_dim"
+[0m19:07:19.026246 [debug] [ThreadPool]: On list_airflow_dim: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow_dim"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dim'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dim'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dim'
+  
+[0m19:07:19.027440 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.001 seconds
+[0m19:07:19.028069 [debug] [ThreadPool]: On list_airflow_dim: ROLLBACK
+[0m19:07:19.028387 [debug] [ThreadPool]: On list_airflow_dim: Close
+[0m19:07:19.030897 [debug] [MainThread]: Using postgres connection "master"
+[0m19:07:19.031190 [debug] [MainThread]: On master: BEGIN
+[0m19:07:19.031421 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:07:19.032840 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m19:07:19.033151 [debug] [MainThread]: Using postgres connection "master"
+[0m19:07:19.033445 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m19:07:19.036287 [debug] [MainThread]: SQL status: SELECT 2 in 0.003 seconds
+[0m19:07:19.036954 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e5253701-e527-43a6-9a26-b2d3f1b8fdf5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9f0f0100>]}
+[0m19:07:19.037280 [debug] [MainThread]: On master: ROLLBACK
+[0m19:07:19.037625 [debug] [MainThread]: Using postgres connection "master"
+[0m19:07:19.037887 [debug] [MainThread]: On master: BEGIN
+[0m19:07:19.038286 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m19:07:19.038602 [debug] [MainThread]: On master: COMMIT
+[0m19:07:19.038894 [debug] [MainThread]: Using postgres connection "master"
+[0m19:07:19.039136 [debug] [MainThread]: On master: COMMIT
+[0m19:07:19.039454 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m19:07:19.039707 [debug] [MainThread]: On master: Close
+[0m19:07:19.040889 [debug] [Thread-1 (]: Began running node model.etl_waterlevel.fact_waterlevel
+[0m19:07:19.041283 [info ] [Thread-1 (]: 1 of 1 START sql incremental model fact.fact_waterlevel ........................ [RUN]
+[0m19:07:19.041651 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_airflow_dim, now model.etl_waterlevel.fact_waterlevel)
+[0m19:07:19.041930 [debug] [Thread-1 (]: Began compiling node model.etl_waterlevel.fact_waterlevel
+[0m19:07:19.048864 [debug] [Thread-1 (]: Writing injected SQL for node "model.etl_waterlevel.fact_waterlevel"
+[0m19:07:19.049714 [debug] [Thread-1 (]: Began executing node model.etl_waterlevel.fact_waterlevel
+[0m19:07:19.077566 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m19:07:19.077922 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+    
+  
+    
+
+  create temporary table "fact_waterlevel__dbt_tmp190719065611"
+  
+  
+    as
+  
+  (
+    
+
+with main as (
+    select
+        distinct
+        concat("stationId",'_',"stationCode") as station_key,
+        "stationId" as station_id,
+        "stationCode" as station_code,
+        "waterLevel" as water_level,
+        "waterlevelStatus" as waterlevel_status,
+        case
+            when "waterlevelStatus" = 3 then '🚨 Beyond Danger'
+            when "waterlevelStatus" = 2 then '⚠️ Between Warning and Danger'
+            when "waterlevelStatus" = 1 then '🔶 Between Alert and Warning'
+            when "waterlevelStatus" = 0 then '✅ Between Normal and Alert'
+            when "waterlevelStatus" = -1 then '🟢 Below Normal (Safe)'
+            else '❓ Unknown Status'
+        end as waterlevel_condition,
+        "stationName",
+        "districtName",
+        to_timestamp("lastUpdate", 'DD/MM/YYYY HH24:MI:SS')::timestamp AS last_update
+    from
+        raw.waterlevels w
+    where
+        "stationStatus" = 1
+
+        
+        /* This condition is important to avoid reprocessing old data */
+        and to_timestamp("lastUpdate", 'DD/MM/YYYY HH24:MI:SS')::timestamp > (
+            select max(last_update) from "airflow"."fact"."fact_waterlevel"
+        )
+        
+)
+
+select * from main
+  );
+  
+  
+[0m19:07:19.078251 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:07:19.092784 [debug] [Thread-1 (]: SQL status: SELECT 72 in 0.015 seconds
+[0m19:07:19.099889 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m19:07:19.100190 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: BEGIN
+[0m19:07:19.100617 [debug] [Thread-1 (]: SQL status: BEGIN in 0.000 seconds
+[0m19:07:19.100993 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m19:07:19.101275 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel__dbt_tmp190719065611'
+        
+      order by ordinal_position
+
+  
+[0m19:07:19.103928 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.002 seconds
+[0m19:07:19.106491 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m19:07:19.106800 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "airflow".INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel'
+        
+        and table_schema = 'fact'
+        
+      order by ordinal_position
+
+  
+[0m19:07:19.108282 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m19:07:19.114658 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m19:07:19.114974 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel__dbt_tmp190719065611'
+        
+      order by ordinal_position
+
+  
+[0m19:07:19.116232 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m19:07:19.117880 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m19:07:19.118186 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "airflow".INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel'
+        
+        and table_schema = 'fact'
+        
+      order by ordinal_position
+
+  
+[0m19:07:19.119348 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m19:07:19.123864 [debug] [Thread-1 (]: 
+    In "airflow"."fact"."fact_waterlevel":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+[0m19:07:19.127345 [debug] [Thread-1 (]: Writing runtime sql for node "model.etl_waterlevel.fact_waterlevel"
+[0m19:07:19.128145 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m19:07:19.128437 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      insert into "airflow"."fact"."fact_waterlevel" ("station_key", "station_id", "station_code", "water_level", "waterlevel_status", "waterlevel_condition", "stationName", "districtName", "last_update")
+    (
+        select "station_key", "station_id", "station_code", "water_level", "waterlevel_status", "waterlevel_condition", "stationName", "districtName", "last_update"
+        from "fact_waterlevel__dbt_tmp190719065611"
+    )
+
+
+  
+[0m19:07:19.129275 [debug] [Thread-1 (]: SQL status: INSERT 0 72 in 0.001 seconds
+[0m19:07:19.136880 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: COMMIT
+[0m19:07:19.137157 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m19:07:19.137386 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: COMMIT
+[0m19:07:19.138567 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m19:07:19.139747 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: Close
+[0m19:07:19.140847 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e5253701-e527-43a6-9a26-b2d3f1b8fdf5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa1dc0af0>]}
+[0m19:07:19.141267 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model fact.fact_waterlevel ................... [[32mINSERT 0 72[0m in 0.10s]
+[0m19:07:19.141629 [debug] [Thread-1 (]: Finished running node model.etl_waterlevel.fact_waterlevel
+[0m19:07:19.142324 [debug] [MainThread]: Using postgres connection "master"
+[0m19:07:19.142568 [debug] [MainThread]: On master: BEGIN
+[0m19:07:19.142771 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m19:07:19.144226 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m19:07:19.144511 [debug] [MainThread]: On master: COMMIT
+[0m19:07:19.144777 [debug] [MainThread]: Using postgres connection "master"
+[0m19:07:19.145007 [debug] [MainThread]: On master: COMMIT
+[0m19:07:19.145274 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m19:07:19.145481 [debug] [MainThread]: On master: Close
+[0m19:07:19.145743 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:07:19.145982 [debug] [MainThread]: Connection 'model.etl_waterlevel.fact_waterlevel' was properly closed.
+[0m19:07:19.146210 [info ] [MainThread]: 
+[0m19:07:19.146428 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 0.18 seconds (0.18s).
+[0m19:07:19.146808 [debug] [MainThread]: Command end result
+[0m19:07:19.161548 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m19:07:19.162647 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m19:07:19.166236 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/target/run_results.json
+[0m19:07:19.166474 [info ] [MainThread]: 
+[0m19:07:19.166770 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:07:19.167001 [info ] [MainThread]: 
+[0m19:07:19.167230 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m19:07:19.167751 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.49714833, "process_in_blocks": "0", "process_kernel_time": 0.062225, "process_mem_max_rss": "111292", "process_out_blocks": "1701", "process_user_time": 1.206364}
+[0m19:07:19.168066 [debug] [MainThread]: Command `dbt run` succeeded at 19:07:19.168022 after 0.50 seconds
+[0m19:07:19.168316 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9fc542b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9fb9c100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff9fc69bd0>]}
+[0m19:07:19.168573 [debug] [MainThread]: Flushing usage events
+[0m19:07:20.732424 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:07:38.615577 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaa6882e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa9768580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa97685e0>]}
+
+
+============================== 20:07:38.618494 | 59e10f94-ee12-4f52-ae23-39ad7d89115f ==============================
+[0m20:07:38.618494 [info ] [MainThread]: Running with dbt=1.9.0
+[0m20:07:38.618920 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/home/airflow/.dbt', 'log_path': '/usr/app/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt run --models fact_waterlevel', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m20:07:38.704603 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '59e10f94-ee12-4f52-ae23-39ad7d89115f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac896c20>]}
+[0m20:07:38.731306 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '59e10f94-ee12-4f52-ae23-39ad7d89115f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa976cc70>]}
+[0m20:07:38.731771 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m20:07:38.766005 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m20:07:38.814816 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:07:38.815211 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:07:38.818285 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.etl_waterlevel.staging
+[0m20:07:38.829927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '59e10f94-ee12-4f52-ae23-39ad7d89115f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa8a684f0>]}
+[0m20:07:38.866902 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m20:07:38.871334 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m20:07:38.884324 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '59e10f94-ee12-4f52-ae23-39ad7d89115f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa8a87220>]}
+[0m20:07:38.885891 [info ] [MainThread]: Found 3 models, 434 macros
+[0m20:07:38.886226 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '59e10f94-ee12-4f52-ae23-39ad7d89115f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa8a871c0>]}
+[0m20:07:38.887070 [info ] [MainThread]: 
+[0m20:07:38.887340 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m20:07:38.887581 [info ] [MainThread]: 
+[0m20:07:38.887999 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m20:07:38.888701 [debug] [ThreadPool]: Acquiring new postgres connection 'list_airflow'
+[0m20:07:38.931412 [debug] [ThreadPool]: Using postgres connection "list_airflow"
+[0m20:07:38.931866 [debug] [ThreadPool]: On list_airflow: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m20:07:38.932160 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:07:38.934950 [debug] [ThreadPool]: SQL status: SELECT 36 in 0.003 seconds
+[0m20:07:38.935722 [debug] [ThreadPool]: On list_airflow: Close
+[0m20:07:38.938377 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_airflow, now list_airflow_dim)
+[0m20:07:38.941621 [debug] [ThreadPool]: Using postgres connection "list_airflow_dim"
+[0m20:07:38.941907 [debug] [ThreadPool]: On list_airflow_dim: BEGIN
+[0m20:07:38.942147 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:07:38.943759 [debug] [ThreadPool]: SQL status: BEGIN in 0.002 seconds
+[0m20:07:38.944083 [debug] [ThreadPool]: Using postgres connection "list_airflow_dim"
+[0m20:07:38.944366 [debug] [ThreadPool]: On list_airflow_dim: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow_dim"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dim'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dim'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dim'
+  
+[0m20:07:38.945707 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.001 seconds
+[0m20:07:38.946371 [debug] [ThreadPool]: On list_airflow_dim: ROLLBACK
+[0m20:07:38.946706 [debug] [ThreadPool]: On list_airflow_dim: Close
+[0m20:07:38.947109 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_airflow_dim, now list_airflow_fact)
+[0m20:07:38.948497 [debug] [ThreadPool]: Using postgres connection "list_airflow_fact"
+[0m20:07:38.948759 [debug] [ThreadPool]: On list_airflow_fact: BEGIN
+[0m20:07:38.949065 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m20:07:38.950526 [debug] [ThreadPool]: SQL status: BEGIN in 0.001 seconds
+[0m20:07:38.950868 [debug] [ThreadPool]: Using postgres connection "list_airflow_fact"
+[0m20:07:38.951142 [debug] [ThreadPool]: On list_airflow_fact: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow_fact"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'fact'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'fact'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'fact'
+  
+[0m20:07:38.952358 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.001 seconds
+[0m20:07:38.952984 [debug] [ThreadPool]: On list_airflow_fact: ROLLBACK
+[0m20:07:38.953306 [debug] [ThreadPool]: On list_airflow_fact: Close
+[0m20:07:38.955738 [debug] [MainThread]: Using postgres connection "master"
+[0m20:07:38.956048 [debug] [MainThread]: On master: BEGIN
+[0m20:07:38.956281 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:07:38.957746 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m20:07:38.958059 [debug] [MainThread]: Using postgres connection "master"
+[0m20:07:38.958350 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m20:07:38.961206 [debug] [MainThread]: SQL status: SELECT 2 in 0.003 seconds
+[0m20:07:38.961847 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '59e10f94-ee12-4f52-ae23-39ad7d89115f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaa032440>]}
+[0m20:07:38.962211 [debug] [MainThread]: On master: ROLLBACK
+[0m20:07:38.962542 [debug] [MainThread]: Using postgres connection "master"
+[0m20:07:38.962795 [debug] [MainThread]: On master: BEGIN
+[0m20:07:38.963210 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m20:07:38.963520 [debug] [MainThread]: On master: COMMIT
+[0m20:07:38.963758 [debug] [MainThread]: Using postgres connection "master"
+[0m20:07:38.964021 [debug] [MainThread]: On master: COMMIT
+[0m20:07:38.964364 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m20:07:38.964601 [debug] [MainThread]: On master: Close
+[0m20:07:38.965730 [debug] [Thread-1 (]: Began running node model.etl_waterlevel.fact_waterlevel
+[0m20:07:38.966120 [info ] [Thread-1 (]: 1 of 1 START sql incremental model fact.fact_waterlevel ........................ [RUN]
+[0m20:07:38.966424 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_airflow_fact, now model.etl_waterlevel.fact_waterlevel)
+[0m20:07:38.966690 [debug] [Thread-1 (]: Began compiling node model.etl_waterlevel.fact_waterlevel
+[0m20:07:38.973501 [debug] [Thread-1 (]: Writing injected SQL for node "model.etl_waterlevel.fact_waterlevel"
+[0m20:07:38.974390 [debug] [Thread-1 (]: Began executing node model.etl_waterlevel.fact_waterlevel
+[0m20:07:39.002738 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m20:07:39.003126 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+    
+  
+    
+
+  create temporary table "fact_waterlevel__dbt_tmp200738990615"
+  
+  
+    as
+  
+  (
+    
+
+with main as (
+    select
+        distinct
+        concat("stationId",'_',"stationCode") as station_key,
+        "stationId" as station_id,
+        "stationCode" as station_code,
+        "waterLevel" as water_level,
+        "waterlevelStatus" as waterlevel_status,
+        case
+            when "waterlevelStatus" = 3 then '🚨 Beyond Danger'
+            when "waterlevelStatus" = 2 then '⚠️ Between Warning and Danger'
+            when "waterlevelStatus" = 1 then '🔶 Between Alert and Warning'
+            when "waterlevelStatus" = 0 then '✅ Between Normal and Alert'
+            when "waterlevelStatus" = -1 then '🟢 Below Normal (Safe)'
+            else '❓ Unknown Status'
+        end as waterlevel_condition,
+        "stationName",
+        "districtName",
+        to_timestamp("lastUpdate", 'DD/MM/YYYY HH24:MI:SS')::timestamp AS last_update
+    from
+        raw.waterlevels w
+    where
+        "stationStatus" = 1
+
+        
+        /* This condition is important to avoid reprocessing old data */
+        and to_timestamp("lastUpdate", 'DD/MM/YYYY HH24:MI:SS')::timestamp > (
+            select max(last_update) from "airflow"."fact"."fact_waterlevel"
+        )
+        
+)
+
+select * from main
+  );
+  
+  
+[0m20:07:39.003454 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m20:07:39.018172 [debug] [Thread-1 (]: SQL status: SELECT 72 in 0.015 seconds
+[0m20:07:39.025252 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m20:07:39.025560 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: BEGIN
+[0m20:07:39.025982 [debug] [Thread-1 (]: SQL status: BEGIN in 0.000 seconds
+[0m20:07:39.026307 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m20:07:39.026590 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel__dbt_tmp200738990615'
+        
+      order by ordinal_position
+
+  
+[0m20:07:39.029270 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.002 seconds
+[0m20:07:39.032166 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m20:07:39.032452 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "airflow".INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel'
+        
+        and table_schema = 'fact'
+        
+      order by ordinal_position
+
+  
+[0m20:07:39.033706 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m20:07:39.040120 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m20:07:39.040436 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel__dbt_tmp200738990615'
+        
+      order by ordinal_position
+
+  
+[0m20:07:39.041672 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m20:07:39.043370 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m20:07:39.043666 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "airflow".INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel'
+        
+        and table_schema = 'fact'
+        
+      order by ordinal_position
+
+  
+[0m20:07:39.044874 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m20:07:39.049478 [debug] [Thread-1 (]: 
+    In "airflow"."fact"."fact_waterlevel":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+[0m20:07:39.052977 [debug] [Thread-1 (]: Writing runtime sql for node "model.etl_waterlevel.fact_waterlevel"
+[0m20:07:39.053862 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m20:07:39.054154 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      insert into "airflow"."fact"."fact_waterlevel" ("station_key", "station_id", "station_code", "water_level", "waterlevel_status", "waterlevel_condition", "stationName", "districtName", "last_update")
+    (
+        select "station_key", "station_id", "station_code", "water_level", "waterlevel_status", "waterlevel_condition", "stationName", "districtName", "last_update"
+        from "fact_waterlevel__dbt_tmp200738990615"
+    )
+
+
+  
+[0m20:07:39.054697 [debug] [Thread-1 (]: SQL status: INSERT 0 72 in 0.000 seconds
+[0m20:07:39.062065 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: COMMIT
+[0m20:07:39.062335 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m20:07:39.062560 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: COMMIT
+[0m20:07:39.063511 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m20:07:39.064609 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: Close
+[0m20:07:39.065726 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '59e10f94-ee12-4f52-ae23-39ad7d89115f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac896770>]}
+[0m20:07:39.066281 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model fact.fact_waterlevel ................... [[32mINSERT 0 72[0m in 0.10s]
+[0m20:07:39.066730 [debug] [Thread-1 (]: Finished running node model.etl_waterlevel.fact_waterlevel
+[0m20:07:39.067392 [debug] [MainThread]: Using postgres connection "master"
+[0m20:07:39.067675 [debug] [MainThread]: On master: BEGIN
+[0m20:07:39.067911 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m20:07:39.069352 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m20:07:39.069624 [debug] [MainThread]: On master: COMMIT
+[0m20:07:39.069862 [debug] [MainThread]: Using postgres connection "master"
+[0m20:07:39.070083 [debug] [MainThread]: On master: COMMIT
+[0m20:07:39.070351 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m20:07:39.070550 [debug] [MainThread]: On master: Close
+[0m20:07:39.070809 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m20:07:39.071031 [debug] [MainThread]: Connection 'model.etl_waterlevel.fact_waterlevel' was properly closed.
+[0m20:07:39.071295 [info ] [MainThread]: 
+[0m20:07:39.071522 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 0.18 seconds (0.18s).
+[0m20:07:39.071898 [debug] [MainThread]: Command end result
+[0m20:07:39.087057 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m20:07:39.088317 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m20:07:39.091576 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/target/run_results.json
+[0m20:07:39.091795 [info ] [MainThread]: 
+[0m20:07:39.092069 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m20:07:39.092281 [info ] [MainThread]: 
+[0m20:07:39.092494 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m20:07:39.092997 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.5029766, "process_in_blocks": "0", "process_kernel_time": 0.072081, "process_mem_max_rss": "111348", "process_out_blocks": "1701", "process_user_time": 1.202366}
+[0m20:07:39.093326 [debug] [MainThread]: Command `dbt run` succeeded at 20:07:39.093281 after 0.50 seconds
+[0m20:07:39.093565 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaa6882e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa976cc70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaa6a3550>]}
+[0m20:07:39.093810 [debug] [MainThread]: Flushing usage events
+[0m20:07:40.790380 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m21:08:53.072359 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8a994310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff89a83d30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff89a83cd0>]}
+
+
+============================== 21:08:53.075311 | 1e6df625-dfd3-41fe-a981-4e09d8173d08 ==============================
+[0m21:08:53.075311 [info ] [MainThread]: Running with dbt=1.9.0
+[0m21:08:53.075725 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/airflow/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/usr/app/logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt run --models fact_waterlevel', 'send_anonymous_usage_stats': 'True'}
+[0m21:08:53.157862 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1e6df625-dfd3-41fe-a981-4e09d8173d08', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8915e290>]}
+[0m21:08:53.184311 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1e6df625-dfd3-41fe-a981-4e09d8173d08', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8a8e41c0>]}
+[0m21:08:53.184760 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m21:08:53.219519 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m21:08:53.268188 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:08:53.268517 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:08:53.271675 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.etl_waterlevel.staging
+[0m21:08:53.283506 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1e6df625-dfd3-41fe-a981-4e09d8173d08', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff88cf0550>]}
+[0m21:08:53.319311 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m21:08:53.323195 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m21:08:53.331651 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1e6df625-dfd3-41fe-a981-4e09d8173d08', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff88d0f220>]}
+[0m21:08:53.331953 [info ] [MainThread]: Found 3 models, 434 macros
+[0m21:08:53.332189 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1e6df625-dfd3-41fe-a981-4e09d8173d08', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff88d0f1c0>]}
+[0m21:08:53.332858 [info ] [MainThread]: 
+[0m21:08:53.333109 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:08:53.333320 [info ] [MainThread]: 
+[0m21:08:53.333617 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m21:08:53.334193 [debug] [ThreadPool]: Acquiring new postgres connection 'list_airflow'
+[0m21:08:53.372039 [debug] [ThreadPool]: Using postgres connection "list_airflow"
+[0m21:08:53.372454 [debug] [ThreadPool]: On list_airflow: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m21:08:53.372728 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:08:53.375442 [debug] [ThreadPool]: SQL status: SELECT 36 in 0.003 seconds
+[0m21:08:53.376212 [debug] [ThreadPool]: On list_airflow: Close
+[0m21:08:53.378820 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_airflow, now list_airflow_dim)
+[0m21:08:53.382180 [debug] [ThreadPool]: Using postgres connection "list_airflow_dim"
+[0m21:08:53.382472 [debug] [ThreadPool]: On list_airflow_dim: BEGIN
+[0m21:08:53.382722 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:08:53.386891 [debug] [ThreadPool]: SQL status: BEGIN in 0.004 seconds
+[0m21:08:53.387239 [debug] [ThreadPool]: Using postgres connection "list_airflow_dim"
+[0m21:08:53.387552 [debug] [ThreadPool]: On list_airflow_dim: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow_dim"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dim'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dim'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dim'
+  
+[0m21:08:53.388876 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.001 seconds
+[0m21:08:53.389585 [debug] [ThreadPool]: On list_airflow_dim: ROLLBACK
+[0m21:08:53.389936 [debug] [ThreadPool]: On list_airflow_dim: Close
+[0m21:08:53.390337 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_airflow_dim, now list_airflow_fact)
+[0m21:08:53.391663 [debug] [ThreadPool]: Using postgres connection "list_airflow_fact"
+[0m21:08:53.391936 [debug] [ThreadPool]: On list_airflow_fact: BEGIN
+[0m21:08:53.392178 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:08:53.393642 [debug] [ThreadPool]: SQL status: BEGIN in 0.001 seconds
+[0m21:08:53.393958 [debug] [ThreadPool]: Using postgres connection "list_airflow_fact"
+[0m21:08:53.394247 [debug] [ThreadPool]: On list_airflow_fact: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow_fact"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'fact'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'fact'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'fact'
+  
+[0m21:08:53.395439 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.001 seconds
+[0m21:08:53.396061 [debug] [ThreadPool]: On list_airflow_fact: ROLLBACK
+[0m21:08:53.396379 [debug] [ThreadPool]: On list_airflow_fact: Close
+[0m21:08:53.398770 [debug] [MainThread]: Using postgres connection "master"
+[0m21:08:53.399037 [debug] [MainThread]: On master: BEGIN
+[0m21:08:53.399277 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m21:08:53.400747 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m21:08:53.401058 [debug] [MainThread]: Using postgres connection "master"
+[0m21:08:53.401359 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m21:08:53.404262 [debug] [MainThread]: SQL status: SELECT 2 in 0.003 seconds
+[0m21:08:53.404887 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1e6df625-dfd3-41fe-a981-4e09d8173d08', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8c3b7e50>]}
+[0m21:08:53.405239 [debug] [MainThread]: On master: ROLLBACK
+[0m21:08:53.405579 [debug] [MainThread]: Using postgres connection "master"
+[0m21:08:53.405820 [debug] [MainThread]: On master: BEGIN
+[0m21:08:53.406234 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m21:08:53.406540 [debug] [MainThread]: On master: COMMIT
+[0m21:08:53.406778 [debug] [MainThread]: Using postgres connection "master"
+[0m21:08:53.407017 [debug] [MainThread]: On master: COMMIT
+[0m21:08:53.407332 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m21:08:53.407610 [debug] [MainThread]: On master: Close
+[0m21:08:53.408743 [debug] [Thread-1 (]: Began running node model.etl_waterlevel.fact_waterlevel
+[0m21:08:53.409127 [info ] [Thread-1 (]: 1 of 1 START sql incremental model fact.fact_waterlevel ........................ [RUN]
+[0m21:08:53.409460 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_airflow_fact, now model.etl_waterlevel.fact_waterlevel)
+[0m21:08:53.409738 [debug] [Thread-1 (]: Began compiling node model.etl_waterlevel.fact_waterlevel
+[0m21:08:53.416601 [debug] [Thread-1 (]: Writing injected SQL for node "model.etl_waterlevel.fact_waterlevel"
+[0m21:08:53.417366 [debug] [Thread-1 (]: Began executing node model.etl_waterlevel.fact_waterlevel
+[0m21:08:53.445304 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m21:08:53.445658 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+    
+  
+    
+
+  create temporary table "fact_waterlevel__dbt_tmp210853433520"
+  
+  
+    as
+  
+  (
+    
+
+with main as (
+    select
+        distinct
+        concat("stationId",'_',"stationCode") as station_key,
+        "stationId" as station_id,
+        "stationCode" as station_code,
+        "waterLevel" as water_level,
+        "waterlevelStatus" as waterlevel_status,
+        case
+            when "waterlevelStatus" = 3 then '🚨 Beyond Danger'
+            when "waterlevelStatus" = 2 then '⚠️ Between Warning and Danger'
+            when "waterlevelStatus" = 1 then '🔶 Between Alert and Warning'
+            when "waterlevelStatus" = 0 then '✅ Between Normal and Alert'
+            when "waterlevelStatus" = -1 then '🟢 Below Normal (Safe)'
+            else '❓ Unknown Status'
+        end as waterlevel_condition,
+        "stationName",
+        "districtName",
+        to_timestamp("lastUpdate", 'DD/MM/YYYY HH24:MI:SS')::timestamp AS last_update
+    from
+        raw.waterlevels w
+    where
+        "stationStatus" = 1
+
+        
+        /* This condition is important to avoid reprocessing old data */
+        and to_timestamp("lastUpdate", 'DD/MM/YYYY HH24:MI:SS')::timestamp > (
+            select max(last_update) from "airflow"."fact"."fact_waterlevel"
+        )
+        
+)
+
+select * from main
+  );
+  
+  
+[0m21:08:53.446032 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m21:08:53.460765 [debug] [Thread-1 (]: SQL status: SELECT 72 in 0.015 seconds
+[0m21:08:53.467836 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m21:08:53.468144 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: BEGIN
+[0m21:08:53.468542 [debug] [Thread-1 (]: SQL status: BEGIN in 0.000 seconds
+[0m21:08:53.468882 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m21:08:53.469196 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel__dbt_tmp210853433520'
+        
+      order by ordinal_position
+
+  
+[0m21:08:53.471834 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.002 seconds
+[0m21:08:53.474447 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m21:08:53.474757 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "airflow".INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel'
+        
+        and table_schema = 'fact'
+        
+      order by ordinal_position
+
+  
+[0m21:08:53.476051 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m21:08:53.482394 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m21:08:53.482707 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel__dbt_tmp210853433520'
+        
+      order by ordinal_position
+
+  
+[0m21:08:53.483873 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m21:08:53.485515 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m21:08:53.485806 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "airflow".INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel'
+        
+        and table_schema = 'fact'
+        
+      order by ordinal_position
+
+  
+[0m21:08:53.487049 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m21:08:53.491565 [debug] [Thread-1 (]: 
+    In "airflow"."fact"."fact_waterlevel":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+[0m21:08:53.494994 [debug] [Thread-1 (]: Writing runtime sql for node "model.etl_waterlevel.fact_waterlevel"
+[0m21:08:53.495850 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m21:08:53.496169 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      insert into "airflow"."fact"."fact_waterlevel" ("station_key", "station_id", "station_code", "water_level", "waterlevel_status", "waterlevel_condition", "stationName", "districtName", "last_update")
+    (
+        select "station_key", "station_id", "station_code", "water_level", "waterlevel_status", "waterlevel_condition", "stationName", "districtName", "last_update"
+        from "fact_waterlevel__dbt_tmp210853433520"
+    )
+
+
+  
+[0m21:08:53.496683 [debug] [Thread-1 (]: SQL status: INSERT 0 72 in 0.000 seconds
+[0m21:08:53.504254 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: COMMIT
+[0m21:08:53.504547 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m21:08:53.504814 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: COMMIT
+[0m21:08:53.508038 [debug] [Thread-1 (]: SQL status: COMMIT in 0.003 seconds
+[0m21:08:53.509042 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: Close
+[0m21:08:53.510097 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1e6df625-dfd3-41fe-a981-4e09d8173d08', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8cbc27a0>]}
+[0m21:08:53.510578 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model fact.fact_waterlevel ................... [[32mINSERT 0 72[0m in 0.10s]
+[0m21:08:53.510955 [debug] [Thread-1 (]: Finished running node model.etl_waterlevel.fact_waterlevel
+[0m21:08:53.511630 [debug] [MainThread]: Using postgres connection "master"
+[0m21:08:53.511856 [debug] [MainThread]: On master: BEGIN
+[0m21:08:53.512065 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m21:08:53.513458 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m21:08:53.513731 [debug] [MainThread]: On master: COMMIT
+[0m21:08:53.513994 [debug] [MainThread]: Using postgres connection "master"
+[0m21:08:53.514204 [debug] [MainThread]: On master: COMMIT
+[0m21:08:53.514457 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m21:08:53.514650 [debug] [MainThread]: On master: Close
+[0m21:08:53.514919 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:08:53.515128 [debug] [MainThread]: Connection 'model.etl_waterlevel.fact_waterlevel' was properly closed.
+[0m21:08:53.515345 [info ] [MainThread]: 
+[0m21:08:53.515573 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 0.18 seconds (0.18s).
+[0m21:08:53.515950 [debug] [MainThread]: Command end result
+[0m21:08:53.530989 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m21:08:53.532070 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m21:08:53.535656 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/target/run_results.json
+[0m21:08:53.535892 [info ] [MainThread]: 
+[0m21:08:53.536198 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:08:53.536452 [info ] [MainThread]: 
+[0m21:08:53.536676 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m21:08:53.537174 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.4905734, "process_in_blocks": "0", "process_kernel_time": 0.060886, "process_mem_max_rss": "111364", "process_out_blocks": "1701", "process_user_time": 1.197757}
+[0m21:08:53.537504 [debug] [MainThread]: Command `dbt run` succeeded at 21:08:53.537460 after 0.49 seconds
+[0m21:08:53.537748 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8a994310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8915e290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8aa036d0>]}
+[0m21:08:53.538038 [debug] [MainThread]: Flushing usage events
+[0m21:08:55.202192 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:09:52.428198 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa6394370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa5478520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa5478580>]}
+
+
+============================== 22:09:52.431149 | c142a38c-34ae-47d9-9f5d-7b8b12d2de8b ==============================
+[0m22:09:52.431149 [info ] [MainThread]: Running with dbt=1.9.0
+[0m22:09:52.431553 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': '/usr/app/logs', 'profiles_dir': '/home/airflow/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt run --models fact_waterlevel', 'send_anonymous_usage_stats': 'True'}
+[0m22:09:52.515320 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c142a38c-34ae-47d9-9f5d-7b8b12d2de8b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa6424310>]}
+[0m22:09:52.542084 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c142a38c-34ae-47d9-9f5d-7b8b12d2de8b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7d35810>]}
+[0m22:09:52.542554 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m22:09:52.576843 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m22:09:52.625722 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m22:09:52.626046 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m22:09:52.629233 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.etl_waterlevel.staging
+[0m22:09:52.641065 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c142a38c-34ae-47d9-9f5d-7b8b12d2de8b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa46f05b0>]}
+[0m22:09:52.677102 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m22:09:52.680727 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m22:09:52.689350 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c142a38c-34ae-47d9-9f5d-7b8b12d2de8b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa470f220>]}
+[0m22:09:52.689675 [info ] [MainThread]: Found 3 models, 434 macros
+[0m22:09:52.689912 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c142a38c-34ae-47d9-9f5d-7b8b12d2de8b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa470f1c0>]}
+[0m22:09:52.690565 [info ] [MainThread]: 
+[0m22:09:52.690841 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m22:09:52.691074 [info ] [MainThread]: 
+[0m22:09:52.691416 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m22:09:52.692057 [debug] [ThreadPool]: Acquiring new postgres connection 'list_airflow'
+[0m22:09:52.729658 [debug] [ThreadPool]: Using postgres connection "list_airflow"
+[0m22:09:52.730054 [debug] [ThreadPool]: On list_airflow: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m22:09:52.730337 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m22:09:52.733063 [debug] [ThreadPool]: SQL status: SELECT 36 in 0.003 seconds
+[0m22:09:52.733852 [debug] [ThreadPool]: On list_airflow: Close
+[0m22:09:52.736496 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_airflow, now list_airflow_dim)
+[0m22:09:52.739685 [debug] [ThreadPool]: Using postgres connection "list_airflow_dim"
+[0m22:09:52.739965 [debug] [ThreadPool]: On list_airflow_dim: BEGIN
+[0m22:09:52.740220 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:09:52.741810 [debug] [ThreadPool]: SQL status: BEGIN in 0.002 seconds
+[0m22:09:52.742146 [debug] [ThreadPool]: Using postgres connection "list_airflow_dim"
+[0m22:09:52.742407 [debug] [ThreadPool]: On list_airflow_dim: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow_dim"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dim'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dim'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dim'
+  
+[0m22:09:52.743745 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.001 seconds
+[0m22:09:52.744421 [debug] [ThreadPool]: On list_airflow_dim: ROLLBACK
+[0m22:09:52.744755 [debug] [ThreadPool]: On list_airflow_dim: Close
+[0m22:09:52.745143 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_airflow_dim, now list_airflow_fact)
+[0m22:09:52.746528 [debug] [ThreadPool]: Using postgres connection "list_airflow_fact"
+[0m22:09:52.746821 [debug] [ThreadPool]: On list_airflow_fact: BEGIN
+[0m22:09:52.747062 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m22:09:52.748479 [debug] [ThreadPool]: SQL status: BEGIN in 0.001 seconds
+[0m22:09:52.748814 [debug] [ThreadPool]: Using postgres connection "list_airflow_fact"
+[0m22:09:52.749081 [debug] [ThreadPool]: On list_airflow_fact: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow_fact"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'fact'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'fact'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'fact'
+  
+[0m22:09:52.750263 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.001 seconds
+[0m22:09:52.750907 [debug] [ThreadPool]: On list_airflow_fact: ROLLBACK
+[0m22:09:52.751232 [debug] [ThreadPool]: On list_airflow_fact: Close
+[0m22:09:52.753637 [debug] [MainThread]: Using postgres connection "master"
+[0m22:09:52.753907 [debug] [MainThread]: On master: BEGIN
+[0m22:09:52.754140 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:09:52.755545 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m22:09:52.755895 [debug] [MainThread]: Using postgres connection "master"
+[0m22:09:52.756233 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m22:09:52.759134 [debug] [MainThread]: SQL status: SELECT 2 in 0.003 seconds
+[0m22:09:52.759771 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c142a38c-34ae-47d9-9f5d-7b8b12d2de8b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7d34fd0>]}
+[0m22:09:52.760102 [debug] [MainThread]: On master: ROLLBACK
+[0m22:09:52.760451 [debug] [MainThread]: Using postgres connection "master"
+[0m22:09:52.760696 [debug] [MainThread]: On master: BEGIN
+[0m22:09:52.761089 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m22:09:52.761373 [debug] [MainThread]: On master: COMMIT
+[0m22:09:52.761630 [debug] [MainThread]: Using postgres connection "master"
+[0m22:09:52.761877 [debug] [MainThread]: On master: COMMIT
+[0m22:09:52.762195 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m22:09:52.762453 [debug] [MainThread]: On master: Close
+[0m22:09:52.763559 [debug] [Thread-1 (]: Began running node model.etl_waterlevel.fact_waterlevel
+[0m22:09:52.763943 [info ] [Thread-1 (]: 1 of 1 START sql incremental model fact.fact_waterlevel ........................ [RUN]
+[0m22:09:52.764256 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_airflow_fact, now model.etl_waterlevel.fact_waterlevel)
+[0m22:09:52.764559 [debug] [Thread-1 (]: Began compiling node model.etl_waterlevel.fact_waterlevel
+[0m22:09:52.771491 [debug] [Thread-1 (]: Writing injected SQL for node "model.etl_waterlevel.fact_waterlevel"
+[0m22:09:52.772390 [debug] [Thread-1 (]: Began executing node model.etl_waterlevel.fact_waterlevel
+[0m22:09:52.800813 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m22:09:52.801215 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+    
+  
+    
+
+  create temporary table "fact_waterlevel__dbt_tmp220952788639"
+  
+  
+    as
+  
+  (
+    
+
+with main as (
+    select
+        distinct
+        concat("stationId",'_',"stationCode") as station_key,
+        "stationId" as station_id,
+        "stationCode" as station_code,
+        "waterLevel" as water_level,
+        "waterlevelStatus" as waterlevel_status,
+        case
+            when "waterlevelStatus" = 3 then '🚨 Beyond Danger'
+            when "waterlevelStatus" = 2 then '⚠️ Between Warning and Danger'
+            when "waterlevelStatus" = 1 then '🔶 Between Alert and Warning'
+            when "waterlevelStatus" = 0 then '✅ Between Normal and Alert'
+            when "waterlevelStatus" = -1 then '🟢 Below Normal (Safe)'
+            else '❓ Unknown Status'
+        end as waterlevel_condition,
+        "stationName",
+        "districtName",
+        to_timestamp("lastUpdate", 'DD/MM/YYYY HH24:MI:SS')::timestamp AS last_update
+    from
+        raw.waterlevels w
+    where
+        "stationStatus" = 1
+
+        
+        /* This condition is important to avoid reprocessing old data */
+        and to_timestamp("lastUpdate", 'DD/MM/YYYY HH24:MI:SS')::timestamp > (
+            select max(last_update) from "airflow"."fact"."fact_waterlevel"
+        )
+        
+)
+
+select * from main
+  );
+  
+  
+[0m22:09:52.801557 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m22:09:52.816270 [debug] [Thread-1 (]: SQL status: SELECT 72 in 0.015 seconds
+[0m22:09:52.823465 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m22:09:52.823777 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: BEGIN
+[0m22:09:52.824185 [debug] [Thread-1 (]: SQL status: BEGIN in 0.000 seconds
+[0m22:09:52.824526 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m22:09:52.824817 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel__dbt_tmp220952788639'
+        
+      order by ordinal_position
+
+  
+[0m22:09:52.827471 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.002 seconds
+[0m22:09:52.830093 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m22:09:52.830422 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "airflow".INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel'
+        
+        and table_schema = 'fact'
+        
+      order by ordinal_position
+
+  
+[0m22:09:52.831762 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m22:09:52.838167 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m22:09:52.838478 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel__dbt_tmp220952788639'
+        
+      order by ordinal_position
+
+  
+[0m22:09:52.839717 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m22:09:52.841410 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m22:09:52.841710 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "airflow".INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel'
+        
+        and table_schema = 'fact'
+        
+      order by ordinal_position
+
+  
+[0m22:09:52.842896 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m22:09:52.847375 [debug] [Thread-1 (]: 
+    In "airflow"."fact"."fact_waterlevel":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+[0m22:09:52.850764 [debug] [Thread-1 (]: Writing runtime sql for node "model.etl_waterlevel.fact_waterlevel"
+[0m22:09:52.851752 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m22:09:52.852044 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      insert into "airflow"."fact"."fact_waterlevel" ("station_key", "station_id", "station_code", "water_level", "waterlevel_status", "waterlevel_condition", "stationName", "districtName", "last_update")
+    (
+        select "station_key", "station_id", "station_code", "water_level", "waterlevel_status", "waterlevel_condition", "stationName", "districtName", "last_update"
+        from "fact_waterlevel__dbt_tmp220952788639"
+    )
+
+
+  
+[0m22:09:52.852552 [debug] [Thread-1 (]: SQL status: INSERT 0 72 in 0.000 seconds
+[0m22:09:52.860235 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: COMMIT
+[0m22:09:52.860531 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m22:09:52.860788 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: COMMIT
+[0m22:09:52.861599 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m22:09:52.862624 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: Close
+[0m22:09:52.863670 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'c142a38c-34ae-47d9-9f5d-7b8b12d2de8b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa8540580>]}
+[0m22:09:52.864164 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model fact.fact_waterlevel ................... [[32mINSERT 0 72[0m in 0.10s]
+[0m22:09:52.864610 [debug] [Thread-1 (]: Finished running node model.etl_waterlevel.fact_waterlevel
+[0m22:09:52.865303 [debug] [MainThread]: Using postgres connection "master"
+[0m22:09:52.865543 [debug] [MainThread]: On master: BEGIN
+[0m22:09:52.865741 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m22:09:52.867189 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m22:09:52.867518 [debug] [MainThread]: On master: COMMIT
+[0m22:09:52.867763 [debug] [MainThread]: Using postgres connection "master"
+[0m22:09:52.867988 [debug] [MainThread]: On master: COMMIT
+[0m22:09:52.868233 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m22:09:52.868453 [debug] [MainThread]: On master: Close
+[0m22:09:52.868718 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m22:09:52.868926 [debug] [MainThread]: Connection 'model.etl_waterlevel.fact_waterlevel' was properly closed.
+[0m22:09:52.869142 [info ] [MainThread]: 
+[0m22:09:52.869365 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 0.18 seconds (0.18s).
+[0m22:09:52.869742 [debug] [MainThread]: Command end result
+[0m22:09:52.884794 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m22:09:52.885881 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m22:09:52.889315 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/target/run_results.json
+[0m22:09:52.889584 [info ] [MainThread]: 
+[0m22:09:52.889863 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m22:09:52.890109 [info ] [MainThread]: 
+[0m22:09:52.890338 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m22:09:52.890867 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.4885693, "process_in_blocks": "0", "process_kernel_time": 0.075193, "process_mem_max_rss": "111096", "process_out_blocks": "1701", "process_user_time": 1.185043}
+[0m22:09:52.891200 [debug] [MainThread]: Command `dbt run` succeeded at 22:09:52.891154 after 0.49 seconds
+[0m22:09:52.891454 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa6394370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa6424310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa6254c70>]}
+[0m22:09:52.891704 [debug] [MainThread]: Flushing usage events
+[0m22:09:54.429282 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:05:05.436358 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff857942e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8487c520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8487c580>]}
+
+
+============================== 23:05:05.440400 | e6f1a2c9-7d3a-4401-b30c-d0a88df63323 ==============================
+[0m23:05:05.440400 [info ] [MainThread]: Running with dbt=1.9.0
+[0m23:05:05.440765 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/usr/app/logs', 'fail_fast': 'False', 'profiles_dir': '/home/airflow/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt run --models fact_waterlevel', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m23:05:05.525810 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e6f1a2c9-7d3a-4401-b30c-d0a88df63323', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff83dea9e0>]}
+[0m23:05:05.552328 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e6f1a2c9-7d3a-4401-b30c-d0a88df63323', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8487c040>]}
+[0m23:05:05.552820 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m23:05:05.587114 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m23:05:05.636175 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m23:05:05.636502 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m23:05:05.639567 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.etl_waterlevel.staging
+[0m23:05:05.651327 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e6f1a2c9-7d3a-4401-b30c-d0a88df63323', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff83b88520>]}
+[0m23:05:05.687116 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m23:05:05.691050 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m23:05:05.699725 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e6f1a2c9-7d3a-4401-b30c-d0a88df63323', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff83ba7220>]}
+[0m23:05:05.700048 [info ] [MainThread]: Found 3 models, 434 macros
+[0m23:05:05.700281 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e6f1a2c9-7d3a-4401-b30c-d0a88df63323', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff83ba71c0>]}
+[0m23:05:05.700946 [info ] [MainThread]: 
+[0m23:05:05.701193 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m23:05:05.701393 [info ] [MainThread]: 
+[0m23:05:05.701677 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m23:05:05.702271 [debug] [ThreadPool]: Acquiring new postgres connection 'list_airflow'
+[0m23:05:05.747000 [debug] [ThreadPool]: Using postgres connection "list_airflow"
+[0m23:05:05.747424 [debug] [ThreadPool]: On list_airflow: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m23:05:05.747741 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m23:05:05.750465 [debug] [ThreadPool]: SQL status: SELECT 36 in 0.003 seconds
+[0m23:05:05.751298 [debug] [ThreadPool]: On list_airflow: Close
+[0m23:05:05.753986 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_airflow, now list_airflow_dim)
+[0m23:05:05.757215 [debug] [ThreadPool]: Using postgres connection "list_airflow_dim"
+[0m23:05:05.757490 [debug] [ThreadPool]: On list_airflow_dim: BEGIN
+[0m23:05:05.757740 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:05:05.759306 [debug] [ThreadPool]: SQL status: BEGIN in 0.002 seconds
+[0m23:05:05.759658 [debug] [ThreadPool]: Using postgres connection "list_airflow_dim"
+[0m23:05:05.759935 [debug] [ThreadPool]: On list_airflow_dim: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow_dim"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dim'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dim'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dim'
+  
+[0m23:05:05.761237 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.001 seconds
+[0m23:05:05.761924 [debug] [ThreadPool]: On list_airflow_dim: ROLLBACK
+[0m23:05:05.762259 [debug] [ThreadPool]: On list_airflow_dim: Close
+[0m23:05:05.762651 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_airflow_dim, now list_airflow_fact)
+[0m23:05:05.764068 [debug] [ThreadPool]: Using postgres connection "list_airflow_fact"
+[0m23:05:05.764320 [debug] [ThreadPool]: On list_airflow_fact: BEGIN
+[0m23:05:05.764560 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m23:05:05.766080 [debug] [ThreadPool]: SQL status: BEGIN in 0.002 seconds
+[0m23:05:05.766374 [debug] [ThreadPool]: Using postgres connection "list_airflow_fact"
+[0m23:05:05.766633 [debug] [ThreadPool]: On list_airflow_fact: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow_fact"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'fact'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'fact'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'fact'
+  
+[0m23:05:05.767903 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.001 seconds
+[0m23:05:05.768541 [debug] [ThreadPool]: On list_airflow_fact: ROLLBACK
+[0m23:05:05.768865 [debug] [ThreadPool]: On list_airflow_fact: Close
+[0m23:05:05.771261 [debug] [MainThread]: Using postgres connection "master"
+[0m23:05:05.771553 [debug] [MainThread]: On master: BEGIN
+[0m23:05:05.771792 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m23:05:05.773315 [debug] [MainThread]: SQL status: BEGIN in 0.002 seconds
+[0m23:05:05.773608 [debug] [MainThread]: Using postgres connection "master"
+[0m23:05:05.773919 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m23:05:05.776849 [debug] [MainThread]: SQL status: SELECT 2 in 0.003 seconds
+[0m23:05:05.777489 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e6f1a2c9-7d3a-4401-b30c-d0a88df63323', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff83ba6c50>]}
+[0m23:05:05.777808 [debug] [MainThread]: On master: ROLLBACK
+[0m23:05:05.778166 [debug] [MainThread]: Using postgres connection "master"
+[0m23:05:05.778444 [debug] [MainThread]: On master: BEGIN
+[0m23:05:05.778844 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m23:05:05.779164 [debug] [MainThread]: On master: COMMIT
+[0m23:05:05.779401 [debug] [MainThread]: Using postgres connection "master"
+[0m23:05:05.779637 [debug] [MainThread]: On master: COMMIT
+[0m23:05:05.779967 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m23:05:05.780237 [debug] [MainThread]: On master: Close
+[0m23:05:05.781396 [debug] [Thread-1 (]: Began running node model.etl_waterlevel.fact_waterlevel
+[0m23:05:05.781762 [info ] [Thread-1 (]: 1 of 1 START sql incremental model fact.fact_waterlevel ........................ [RUN]
+[0m23:05:05.782085 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_airflow_fact, now model.etl_waterlevel.fact_waterlevel)
+[0m23:05:05.782364 [debug] [Thread-1 (]: Began compiling node model.etl_waterlevel.fact_waterlevel
+[0m23:05:05.789354 [debug] [Thread-1 (]: Writing injected SQL for node "model.etl_waterlevel.fact_waterlevel"
+[0m23:05:05.791123 [debug] [Thread-1 (]: Began executing node model.etl_waterlevel.fact_waterlevel
+[0m23:05:05.818850 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m23:05:05.819214 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+    
+  
+    
+
+  create temporary table "fact_waterlevel__dbt_tmp230505806870"
+  
+  
+    as
+  
+  (
+    
+
+with main as (
+    select
+        distinct
+        concat("stationId",'_',"stationCode") as station_key,
+        "stationId" as station_id,
+        "stationCode" as station_code,
+        "waterLevel" as water_level,
+        "waterlevelStatus" as waterlevel_status,
+        case
+            when "waterlevelStatus" = 3 then '🚨 Beyond Danger'
+            when "waterlevelStatus" = 2 then '⚠️ Between Warning and Danger'
+            when "waterlevelStatus" = 1 then '🔶 Between Alert and Warning'
+            when "waterlevelStatus" = 0 then '✅ Between Normal and Alert'
+            when "waterlevelStatus" = -1 then '🟢 Below Normal (Safe)'
+            else '❓ Unknown Status'
+        end as waterlevel_condition,
+        "stationName",
+        "districtName",
+        to_timestamp("lastUpdate", 'DD/MM/YYYY HH24:MI:SS')::timestamp AS last_update
+    from
+        raw.waterlevels w
+    where
+        "stationStatus" = 1
+
+        
+        /* This condition is important to avoid reprocessing old data */
+        and to_timestamp("lastUpdate", 'DD/MM/YYYY HH24:MI:SS')::timestamp > (
+            select max(last_update) from "airflow"."fact"."fact_waterlevel"
+        )
+        
+)
+
+select * from main
+  );
+  
+  
+[0m23:05:05.819527 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m23:05:05.834716 [debug] [Thread-1 (]: SQL status: SELECT 72 in 0.015 seconds
+[0m23:05:05.841934 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m23:05:05.842252 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: BEGIN
+[0m23:05:05.842659 [debug] [Thread-1 (]: SQL status: BEGIN in 0.000 seconds
+[0m23:05:05.843029 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m23:05:05.843319 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel__dbt_tmp230505806870'
+        
+      order by ordinal_position
+
+  
+[0m23:05:05.846004 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.002 seconds
+[0m23:05:05.848590 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m23:05:05.848972 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "airflow".INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel'
+        
+        and table_schema = 'fact'
+        
+      order by ordinal_position
+
+  
+[0m23:05:05.850329 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m23:05:05.856774 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m23:05:05.857102 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel__dbt_tmp230505806870'
+        
+      order by ordinal_position
+
+  
+[0m23:05:05.858330 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m23:05:05.859984 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m23:05:05.860275 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "airflow".INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel'
+        
+        and table_schema = 'fact'
+        
+      order by ordinal_position
+
+  
+[0m23:05:05.861485 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m23:05:05.866020 [debug] [Thread-1 (]: 
+    In "airflow"."fact"."fact_waterlevel":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+[0m23:05:05.869407 [debug] [Thread-1 (]: Writing runtime sql for node "model.etl_waterlevel.fact_waterlevel"
+[0m23:05:05.871068 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m23:05:05.871376 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      insert into "airflow"."fact"."fact_waterlevel" ("station_key", "station_id", "station_code", "water_level", "waterlevel_status", "waterlevel_condition", "stationName", "districtName", "last_update")
+    (
+        select "station_key", "station_id", "station_code", "water_level", "waterlevel_status", "waterlevel_condition", "stationName", "districtName", "last_update"
+        from "fact_waterlevel__dbt_tmp230505806870"
+    )
+
+
+  
+[0m23:05:05.871948 [debug] [Thread-1 (]: SQL status: INSERT 0 72 in 0.000 seconds
+[0m23:05:05.879472 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: COMMIT
+[0m23:05:05.879779 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m23:05:05.880072 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: COMMIT
+[0m23:05:05.882581 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m23:05:05.883675 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: Close
+[0m23:05:05.884690 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e6f1a2c9-7d3a-4401-b30c-d0a88df63323', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff87a46770>]}
+[0m23:05:05.885173 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model fact.fact_waterlevel ................... [[32mINSERT 0 72[0m in 0.10s]
+[0m23:05:05.885565 [debug] [Thread-1 (]: Finished running node model.etl_waterlevel.fact_waterlevel
+[0m23:05:05.886237 [debug] [MainThread]: Using postgres connection "master"
+[0m23:05:05.886470 [debug] [MainThread]: On master: BEGIN
+[0m23:05:05.886666 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m23:05:05.888166 [debug] [MainThread]: SQL status: BEGIN in 0.001 seconds
+[0m23:05:05.888443 [debug] [MainThread]: On master: COMMIT
+[0m23:05:05.888666 [debug] [MainThread]: Using postgres connection "master"
+[0m23:05:05.888859 [debug] [MainThread]: On master: COMMIT
+[0m23:05:05.889153 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m23:05:05.889362 [debug] [MainThread]: On master: Close
+[0m23:05:05.889631 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m23:05:05.889838 [debug] [MainThread]: Connection 'model.etl_waterlevel.fact_waterlevel' was properly closed.
+[0m23:05:05.890063 [info ] [MainThread]: 
+[0m23:05:05.890287 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 0.19 seconds (0.19s).
+[0m23:05:05.890657 [debug] [MainThread]: Command end result
+[0m23:05:05.905738 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m23:05:05.906931 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m23:05:05.910412 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/target/run_results.json
+[0m23:05:05.910636 [info ] [MainThread]: 
+[0m23:05:05.910899 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m23:05:05.911103 [info ] [MainThread]: 
+[0m23:05:05.911316 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m23:05:05.911830 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.501378, "process_in_blocks": "0", "process_kernel_time": 0.069283, "process_mem_max_rss": "111272", "process_out_blocks": "1701", "process_user_time": 1.208954}
+[0m23:05:05.912159 [debug] [MainThread]: Command `dbt run` succeeded at 23:05:05.912113 after 0.50 seconds
+[0m23:05:05.912408 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff857942e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff879d8ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff82e46ad0>]}
+[0m23:05:05.912645 [debug] [MainThread]: Flushing usage events
+[0m23:05:07.030601 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:05:05.631024 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffbaf883a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffba068550>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffba068580>]}
+
+
+============================== 00:05:05.634114 | 9fbea47f-0cc4-48f0-b943-bdceacc5a4f0 ==============================
+[0m00:05:05.634114 [info ] [MainThread]: Running with dbt=1.9.0
+[0m00:05:05.634479 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/usr/app/logs', 'debug': 'False', 'profiles_dir': '/home/airflow/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --models fact_waterlevel', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m00:05:05.727038 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9fbea47f-0cc4-48f0-b943-bdceacc5a4f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffbd4935b0>]}
+[0m00:05:05.754166 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9fbea47f-0cc4-48f0-b943-bdceacc5a4f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffbae44760>]}
+[0m00:05:05.754713 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m00:05:05.789592 [debug] [MainThread]: checksum: c99e828bba267739642b5a3ce85f17518764ea526e0e6c4fdc649171c1a66bff, vars: {}, profile: , target: , version: 1.9.0
+[0m00:05:05.840907 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m00:05:05.841249 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m00:05:05.844458 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.etl_waterlevel.staging
+[0m00:05:05.856297 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9fbea47f-0cc4-48f0-b943-bdceacc5a4f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb93485e0>]}
+[0m00:05:05.892416 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m00:05:05.896350 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m00:05:05.906696 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9fbea47f-0cc4-48f0-b943-bdceacc5a4f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb9363220>]}
+[0m00:05:05.907025 [info ] [MainThread]: Found 3 models, 434 macros
+[0m00:05:05.907259 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9fbea47f-0cc4-48f0-b943-bdceacc5a4f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb93631c0>]}
+[0m00:05:05.908007 [info ] [MainThread]: 
+[0m00:05:05.908269 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m00:05:05.908598 [info ] [MainThread]: 
+[0m00:05:05.908981 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m00:05:05.909583 [debug] [ThreadPool]: Acquiring new postgres connection 'list_airflow'
+[0m00:05:05.949958 [debug] [ThreadPool]: Using postgres connection "list_airflow"
+[0m00:05:05.950362 [debug] [ThreadPool]: On list_airflow: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m00:05:05.950641 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m00:05:05.954761 [debug] [ThreadPool]: SQL status: SELECT 36 in 0.004 seconds
+[0m00:05:05.955573 [debug] [ThreadPool]: On list_airflow: Close
+[0m00:05:05.958519 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_airflow, now list_airflow_dim)
+[0m00:05:05.961753 [debug] [ThreadPool]: Using postgres connection "list_airflow_dim"
+[0m00:05:05.962043 [debug] [ThreadPool]: On list_airflow_dim: BEGIN
+[0m00:05:05.962302 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m00:05:05.963948 [debug] [ThreadPool]: SQL status: BEGIN in 0.002 seconds
+[0m00:05:05.964359 [debug] [ThreadPool]: Using postgres connection "list_airflow_dim"
+[0m00:05:05.964634 [debug] [ThreadPool]: On list_airflow_dim: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow_dim"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dim'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dim'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'dim'
+  
+[0m00:05:05.967512 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.003 seconds
+[0m00:05:05.968193 [debug] [ThreadPool]: On list_airflow_dim: ROLLBACK
+[0m00:05:05.968543 [debug] [ThreadPool]: On list_airflow_dim: Close
+[0m00:05:05.968935 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_airflow_dim, now list_airflow_fact)
+[0m00:05:05.970307 [debug] [ThreadPool]: Using postgres connection "list_airflow_fact"
+[0m00:05:05.970568 [debug] [ThreadPool]: On list_airflow_fact: BEGIN
+[0m00:05:05.970813 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m00:05:05.972321 [debug] [ThreadPool]: SQL status: BEGIN in 0.001 seconds
+[0m00:05:05.972623 [debug] [ThreadPool]: Using postgres connection "list_airflow_fact"
+[0m00:05:05.972884 [debug] [ThreadPool]: On list_airflow_fact: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "list_airflow_fact"} */
+select
+      'airflow' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'fact'
+    union all
+    select
+      'airflow' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'fact'
+    union all
+    select
+      'airflow' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'fact'
+  
+[0m00:05:05.974160 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.001 seconds
+[0m00:05:05.974792 [debug] [ThreadPool]: On list_airflow_fact: ROLLBACK
+[0m00:05:05.975123 [debug] [ThreadPool]: On list_airflow_fact: Close
+[0m00:05:05.977797 [debug] [MainThread]: Using postgres connection "master"
+[0m00:05:05.978074 [debug] [MainThread]: On master: BEGIN
+[0m00:05:05.978329 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m00:05:05.980034 [debug] [MainThread]: SQL status: BEGIN in 0.002 seconds
+[0m00:05:05.980350 [debug] [MainThread]: Using postgres connection "master"
+[0m00:05:05.980652 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m00:05:05.986050 [debug] [MainThread]: SQL status: SELECT 2 in 0.005 seconds
+[0m00:05:05.986722 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '9fbea47f-0cc4-48f0-b943-bdceacc5a4f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb9362d10>]}
+[0m00:05:05.987027 [debug] [MainThread]: On master: ROLLBACK
+[0m00:05:05.987304 [debug] [MainThread]: Using postgres connection "master"
+[0m00:05:05.987505 [debug] [MainThread]: On master: BEGIN
+[0m00:05:05.987810 [debug] [MainThread]: SQL status: BEGIN in 0.000 seconds
+[0m00:05:05.988077 [debug] [MainThread]: On master: COMMIT
+[0m00:05:05.988314 [debug] [MainThread]: Using postgres connection "master"
+[0m00:05:05.988517 [debug] [MainThread]: On master: COMMIT
+[0m00:05:05.988768 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m00:05:05.988966 [debug] [MainThread]: On master: Close
+[0m00:05:05.989923 [debug] [Thread-1 (]: Began running node model.etl_waterlevel.fact_waterlevel
+[0m00:05:05.990300 [info ] [Thread-1 (]: 1 of 1 START sql incremental model fact.fact_waterlevel ........................ [RUN]
+[0m00:05:05.990611 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_airflow_fact, now model.etl_waterlevel.fact_waterlevel)
+[0m00:05:05.990848 [debug] [Thread-1 (]: Began compiling node model.etl_waterlevel.fact_waterlevel
+[0m00:05:05.998030 [debug] [Thread-1 (]: Writing injected SQL for node "model.etl_waterlevel.fact_waterlevel"
+[0m00:05:05.999069 [debug] [Thread-1 (]: Began executing node model.etl_waterlevel.fact_waterlevel
+[0m00:05:06.027796 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m00:05:06.028141 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+    
+  
+    
+
+  create temporary table "fact_waterlevel__dbt_tmp000506015384"
+  
+  
+    as
+  
+  (
+    
+
+with main as (
+    select
+        distinct
+        concat("stationId",'_',"stationCode") as station_key,
+        "stationId" as station_id,
+        "stationCode" as station_code,
+        "waterLevel" as water_level,
+        "waterlevelStatus" as waterlevel_status,
+        case
+            when "waterlevelStatus" = 3 then '🚨 Beyond Danger'
+            when "waterlevelStatus" = 2 then '⚠️ Between Warning and Danger'
+            when "waterlevelStatus" = 1 then '🔶 Between Alert and Warning'
+            when "waterlevelStatus" = 0 then '✅ Between Normal and Alert'
+            when "waterlevelStatus" = -1 then '🟢 Below Normal (Safe)'
+            else '❓ Unknown Status'
+        end as waterlevel_condition,
+        "stationName",
+        "districtName",
+        to_timestamp("lastUpdate", 'DD/MM/YYYY HH24:MI:SS')::timestamp AS last_update
+    from
+        raw.waterlevels w
+    where
+        "stationStatus" = 1
+
+        
+        /* This condition is important to avoid reprocessing old data */
+        and to_timestamp("lastUpdate", 'DD/MM/YYYY HH24:MI:SS')::timestamp > (
+            select max(last_update) from "airflow"."fact"."fact_waterlevel"
+        )
+        
+)
+
+select * from main
+  );
+  
+  
+[0m00:05:06.028532 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m00:05:06.104713 [debug] [Thread-1 (]: SQL status: SELECT 73 in 0.076 seconds
+[0m00:05:06.112306 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m00:05:06.112616 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: BEGIN
+[0m00:05:06.113007 [debug] [Thread-1 (]: SQL status: BEGIN in 0.000 seconds
+[0m00:05:06.113353 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m00:05:06.113632 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel__dbt_tmp000506015384'
+        
+      order by ordinal_position
+
+  
+[0m00:05:06.118718 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.005 seconds
+[0m00:05:06.121426 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m00:05:06.121708 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "airflow".INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel'
+        
+        and table_schema = 'fact'
+        
+      order by ordinal_position
+
+  
+[0m00:05:06.123039 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m00:05:06.129525 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m00:05:06.129838 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel__dbt_tmp000506015384'
+        
+      order by ordinal_position
+
+  
+[0m00:05:06.131118 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m00:05:06.132885 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m00:05:06.133196 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      select
+          column_name,
+          data_type,
+          character_maximum_length,
+          numeric_precision,
+          numeric_scale
+
+      from "airflow".INFORMATION_SCHEMA.columns
+      where table_name = 'fact_waterlevel'
+        
+        and table_schema = 'fact'
+        
+      order by ordinal_position
+
+  
+[0m00:05:06.134390 [debug] [Thread-1 (]: SQL status: SELECT 9 in 0.001 seconds
+[0m00:05:06.139012 [debug] [Thread-1 (]: 
+    In "airflow"."fact"."fact_waterlevel":
+        Schema changed: False
+        Source columns not in target: []
+        Target columns not in source: []
+        New column types: []
+  
+[0m00:05:06.142458 [debug] [Thread-1 (]: Writing runtime sql for node "model.etl_waterlevel.fact_waterlevel"
+[0m00:05:06.143462 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m00:05:06.143766 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: /* {"app": "dbt", "dbt_version": "1.9.0", "profile_name": "etl_waterlevel", "target_name": "dev", "node_id": "model.etl_waterlevel.fact_waterlevel"} */
+
+      insert into "airflow"."fact"."fact_waterlevel" ("station_key", "station_id", "station_code", "water_level", "waterlevel_status", "waterlevel_condition", "stationName", "districtName", "last_update")
+    (
+        select "station_key", "station_id", "station_code", "water_level", "waterlevel_status", "waterlevel_condition", "stationName", "districtName", "last_update"
+        from "fact_waterlevel__dbt_tmp000506015384"
+    )
+
+
+  
+[0m00:05:06.144583 [debug] [Thread-1 (]: SQL status: INSERT 0 73 in 0.000 seconds
+[0m00:05:06.152433 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: COMMIT
+[0m00:05:06.152720 [debug] [Thread-1 (]: Using postgres connection "model.etl_waterlevel.fact_waterlevel"
+[0m00:05:06.152955 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: COMMIT
+[0m00:05:06.154348 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m00:05:06.155657 [debug] [Thread-1 (]: On model.etl_waterlevel.fact_waterlevel: Close
+[0m00:05:06.156960 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '9fbea47f-0cc4-48f0-b943-bdceacc5a4f0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffbd493220>]}
+[0m00:05:06.157442 [info ] [Thread-1 (]: 1 of 1 OK created sql incremental model fact.fact_waterlevel ................... [[32mINSERT 0 73[0m in 0.17s]
+[0m00:05:06.157836 [debug] [Thread-1 (]: Finished running node model.etl_waterlevel.fact_waterlevel
+[0m00:05:06.158562 [debug] [MainThread]: Using postgres connection "master"
+[0m00:05:06.158813 [debug] [MainThread]: On master: BEGIN
+[0m00:05:06.159052 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m00:05:06.160612 [debug] [MainThread]: SQL status: BEGIN in 0.002 seconds
+[0m00:05:06.160866 [debug] [MainThread]: On master: COMMIT
+[0m00:05:06.161067 [debug] [MainThread]: Using postgres connection "master"
+[0m00:05:06.161252 [debug] [MainThread]: On master: COMMIT
+[0m00:05:06.161528 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m00:05:06.161772 [debug] [MainThread]: On master: Close
+[0m00:05:06.162072 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m00:05:06.162291 [debug] [MainThread]: Connection 'model.etl_waterlevel.fact_waterlevel' was properly closed.
+[0m00:05:06.162514 [info ] [MainThread]: 
+[0m00:05:06.162740 [info ] [MainThread]: Finished running 1 incremental model in 0 hours 0 minutes and 0.25 seconds (0.25s).
+[0m00:05:06.163114 [debug] [MainThread]: Command end result
+[0m00:05:06.178377 [debug] [MainThread]: Wrote artifact WritableManifest to /usr/app/target/manifest.json
+[0m00:05:06.179606 [debug] [MainThread]: Wrote artifact SemanticManifest to /usr/app/target/semantic_manifest.json
+[0m00:05:06.182939 [debug] [MainThread]: Wrote artifact RunExecutionResult to /usr/app/target/run_results.json
+[0m00:05:06.183174 [info ] [MainThread]: 
+[0m00:05:06.183452 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m00:05:06.183691 [info ] [MainThread]: 
+[0m00:05:06.183941 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m00:05:06.184517 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.58146435, "process_in_blocks": "0", "process_kernel_time": 0.113495, "process_mem_max_rss": "111648", "process_out_blocks": "2637", "process_user_time": 1.269542}
+[0m00:05:06.184850 [debug] [MainThread]: Command `dbt run` succeeded at 00:05:06.184803 after 0.58 seconds
+[0m00:05:06.185092 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffbaf883a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb9629300>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffbae45c00>]}
+[0m00:05:06.185341 [debug] [MainThread]: Flushing usage events
+[0m00:05:07.562118 [debug] [MainThread]: An error was encountered while trying to flush usage events

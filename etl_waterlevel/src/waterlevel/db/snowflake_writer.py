@@ -5,8 +5,8 @@ from dotenv import load_dotenv
 
 
 def load_csv_to_snowflake_via_copy(csv_path, table_name='RAW.WATERLEVELS'):
-    # load_dotenv()  # 🔑 Load variables from .env file
-    load_dotenv(dotenv_path="/Users/aiman/DE_Projects/etl_waterlevel/.env")
+    load_dotenv(dotenv_path="/opt/airflow/.env")
+
 
     # 1. Credentials from env
     SNOWFLAKE_USER = os.getenv("SNOWFLAKE_USER")
@@ -15,6 +15,9 @@ def load_csv_to_snowflake_via_copy(csv_path, table_name='RAW.WATERLEVELS'):
     SNOWFLAKE_WAREHOUSE = os.getenv("SNOWFLAKE_WAREHOUSE")
     SNOWFLAKE_DATABASE = os.getenv("SNOWFLAKE_DATABASE")
     SNOWFLAKE_SCHEMA = os.getenv("SNOWFLAKE_SCHEMA")
+    SNOWFLAKE_ROLE = os.getenv("SNOWFLAKE_ROLE")
+    SNOWFLAKE_AUTH = os.getenv("SNOWFLAKE_AUTH", "snowflake")  # Defaults to password login
+    
 
     # 2. Create temp CSV (in case you pass a DataFrame later)
     df = pd.read_csv(csv_path)
@@ -23,13 +26,18 @@ def load_csv_to_snowflake_via_copy(csv_path, table_name='RAW.WATERLEVELS'):
 
     # 3. Connect to Snowflake
     conn = snowflake.connector.connect(
-        user=SNOWFLAKE_USER,
-        password=SNOWFLAKE_PW,
-        account=SNOWFLAKE_ACCOUNT,
-        warehouse=SNOWFLAKE_WAREHOUSE,
-        database=SNOWFLAKE_DATABASE,
-        schema=SNOWFLAKE_SCHEMA
+    user=SNOWFLAKE_USER,
+    password=SNOWFLAKE_PW,
+    account=SNOWFLAKE_ACCOUNT,
+    warehouse=SNOWFLAKE_WAREHOUSE,
+    database=SNOWFLAKE_DATABASE,
+    schema=SNOWFLAKE_SCHEMA,
+    role=SNOWFLAKE_ROLE,
+    authenticator=SNOWFLAKE_AUTH
     )
+    import pdb; pdb.set_trace()
+
+
     cursor = conn.cursor()
 
     # 4. Upload file to user's internal stage (@~)

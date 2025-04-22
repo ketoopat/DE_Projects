@@ -18,6 +18,7 @@ x-airflow-common: &airflow-common
     - ./data:/opt/airflow/data
     - ./transform:/usr/app # Mounts your dbt code inside the container
     - ./.dbt:/root/.dbt
+    - ./.env:/opt/airflow/.env
   depends_on:
     - postgres
   user: "${AIRFLOW_UID:-50000}:0"
@@ -61,6 +62,7 @@ services:
     volumes:
       - ./transform:/usr/app # Mounts your dbt code inside the containercd
       - ./.dbt:/root/.dbt
+      - ./.env:/opt/airflow/.env
     working_dir: /usr/app # Default path when you enter the container
     entrypoint: ["/bin/bash"] # So you can enter the container and run commands manually
     tty: true # Keeps the container running for CLI use
