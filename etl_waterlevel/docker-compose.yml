@@ -19,6 +19,8 @@ x-airflow-common: &airflow-common
     - ./transform:/usr/app # Mounts your dbt code inside the container
     - ./.dbt:/root/.dbt
     - ./.env:/opt/airflow/.env
+    - ./rsa_key.p8:/opt/airflow/rsa_key.p8:ro
+
   depends_on:
     - postgres
   user: "${AIRFLOW_UID:-50000}:0"
