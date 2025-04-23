@@ -17,4 +17,4 @@ airflow.db
 
 # Local config
 .env
-.p8
+rsa_key.p8
