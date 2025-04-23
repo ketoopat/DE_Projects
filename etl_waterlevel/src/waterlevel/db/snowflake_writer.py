@@ -46,7 +46,6 @@ def load_csv_to_snowflake_via_copy(csv_path, table_name='RAW.WATERLEVELS'):
         role=SNOWFLAKE_ROLE,
         private_key=private_key_der
     )
-    # import pdb; pdb.set_trace()
     cursor = conn.cursor()
 
     # 5. Upload file to user's internal stage (@~)
@@ -56,6 +55,8 @@ def load_csv_to_snowflake_via_copy(csv_path, table_name='RAW.WATERLEVELS'):
     ).fetchall()
     print(put_result)
 
+
+    # import pdb; pdb.set_trace()
     # 6. Run COPY INTO to load data
     print("📥 Running COPY INTO to load data into table...")
     cursor.execute(f"""
